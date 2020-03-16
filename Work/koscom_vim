@@ -1,0 +1,40 @@
+" VIM-PLUG
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins.
+
+Plug 'SirVer/ultisnips'
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories = ['~/.vim/plugged/ultisnips']
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'tpope/vim-fugitive'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+
+" set autoindent
+" set smartindent
+" set smarttab
+set tabstop=4
+set shiftwidth=4
+
+set smartcase
+set hlsearch
+
+set ruler
+set number
+
+set syntax=on
+set title
+
+iabbr <expr> __pwd expand("%:p:h")
+cabbr Q! q!
+cabbr q1 q!
+cabbr Q1 q!
