@@ -35,8 +35,8 @@ endsnippet
 snippet @func "function" b
 ${1:void} ${2:function_name}($3)
 {
-	${VISUAL}
-}
+	$4
+}${VISUAL}
 endsnippet
 
 post_jump "if snip.tabstop == 0 : split_line(snip.tabstops[4].current_text)"
@@ -103,6 +103,18 @@ struct ${1:`!p snip.rv = (snip.basename or "name") + "_t"`} {
 };
 endsnippet
 
+snippet @template "basic template"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+	${VISUAL}$1
+
+	return 0;
+}
+endsnippet
+
 global !p
 def split_line(text):
 	import textwrap
@@ -125,9 +137,9 @@ snippet #file_header "File Header" b
 *
 * Author:           ${2}  
 * Created:          `date +%m/%d/%y` 
-* Description:      ${4:${VISUAL}}
+* Description:      ${4}
 *****************************************************************************/
-${0}
+${5}
 endsnippet
 
 snippet @while "while () {...}"
