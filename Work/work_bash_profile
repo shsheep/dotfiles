@@ -1,0 +1,9 @@
+#source ~/.bashrc
+# try this fancy one
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specified environment and startup programs
+alias vvrc="vi ~/.vimrc"
+alias svrc="source ~/.vimrc"
