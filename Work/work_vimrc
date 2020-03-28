@@ -38,6 +38,7 @@ cabbr Q! q!
 cabbr q1 q!
 cabbr Q1 q!
 cabbr vrc ~/.vimrc
+imap <F2> <C-N>
 
 " Start Vim at where you lastly worked 
 au BufReadPost *
