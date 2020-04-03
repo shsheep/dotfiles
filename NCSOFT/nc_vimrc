@@ -1,9 +1,0 @@
-set number
-set si
-set tabstop=4
-set shiftwidth=4
-set ruler
-set title
-set nocompatible
-set mouse=a
-syntax on
