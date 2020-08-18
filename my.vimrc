@@ -1,22 +1,22 @@
-" VIM-PLUG
-" Plugins will be downloaded under the specified directory.
-call plug#begin('~/.vim/plugged')
-
-" Declare the list of plugins.
-
-Plug 'SirVer/ultisnips'
-let g:UltiSnipsExpandTrigger="<Tab>"
-let g:UltiSnipsJumpForwardTrigger="<Tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
-let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetDirectories = ['~/.vim/plugged/ultisnips']
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-Plug 'tpope/vim-fugitive'
-
-" List ends here. Plugins become visible to Vim after this call.
-call plug#end()
+"" VIM-PLUG
+"" Plugins will be downloaded under the specified directory.
+"call plug#begin('~/.vim/plugged')
+"
+"" Declare the list of plugins.
+"
+"Plug 'SirVer/ultisnips'
+"let g:UltiSnipsExpandTrigger="<Tab>"
+"let g:UltiSnipsJumpForwardTrigger="<Tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+"let g:UltiSnipsEditSplit="vertical"
+"let g:UltiSnipsSnippetDirectories = ['~/.vim/plugged/ultisnips']
+"
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"
+"Plug 'tpope/vim-fugitive'
+"
+"" List ends here. Plugins become visible to Vim after this call.
+"call plug#end()
 
 set autoindent
 set smartindent
@@ -30,7 +30,7 @@ set hlsearch
 set number
 set ruler
 
-set mouse=a
+"set mouse=a
 
 set syntax=on
 set title
@@ -164,9 +164,9 @@ endfunction
 "MAPPING: maps for comment toggling
 "-----------------------------------
 "Vim recognizes <C-/> as <C-_>
-inoremap <C-_> :call ToggleCommentLine()<cr>
+inoremap <C-_> <ESC>:call ToggleCommentLine()<cr>i
 nnoremap <C-_> :call ToggleCommentLine()<cr>
-vnoremap <C-_> <esc> :call ToggleCommentRange()<cr>
+vnoremap <C-_> <ESC> :call ToggleCommentRange()<cr>
 " Long journey of binding shortcut for comment ENDs
 
 if has("cscope")
