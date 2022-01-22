@@ -1,27 +1,52 @@
-"" VIM-PLUG
-"" Plugins will be downloaded under the specified directory.
-"call plug#begin('~/.vim/plugged')
-"
-"" Declare the list of plugins.
-"
-"Plug 'SirVer/ultisnips'
-"let g:UltiSnipsExpandTrigger="<Tab>"
-"let g:UltiSnipsJumpForwardTrigger="<Tab>"
-"let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
-"let g:UltiSnipsEditSplit="vertical"
-"let g:UltiSnipsSnippetDirectories = ['~/.vim/plugged/ultisnips']
-"
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"
-"Plug 'tpope/vim-fugitive'
-"
-"" List ends here. Plugins become visible to Vim after this call.
-"call plug#end()
+" VIM-PLUG
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+
+" Multiple Plug commands can be written in a single line using | separators
+
+Plug 'SirVer/ultisnips'
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories = ['~/.vim/plugged/namo']
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'preservim/nerdtree'
+" Open NERDTree whenever starts Vim.
+autocmd VimEnter * NERDTree | wincmd p
+" Close Vim if the only window left open is a NERDTree.
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let NERDTreeWinSize=25
+
+let Tlist_Use_Right_Window=1
+let Tlist_Exit_OnlyWindow=1
+let Tlist_Auto_Open=1
+let Tlist_WinWidth=25
+
+" Diminactive
+Plug 'blueyed/vim-diminactive'
+hi ColorColumn  ctermbg=0 guibg=#eee8d5
+let g:diminactive_use_syntax=0
+autocmd VimEnter * DimInactiveColorcolumnOn
+
+Plug 'tpope/vim-fugitive'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+set nocompatible
+set backspace=indent,eol,start
+
+set path+=**
+set wildmenu
 
 set autoindent
 set smartindent
 set smarttab
 set tabstop=4
+set expandtab
 set shiftwidth=4
 
 set smartcase
@@ -30,23 +55,82 @@ set hlsearch
 set number
 set ruler
 
-"set mouse=a
+set mouse=a
 
 set syntax=on
 set title
 
-iabbr <expr> __pwd expand("%:p:h")
+set ut=500
+
+
+cabbr CS cs
+cabbr Cs cs
+cabbr NOh noh
+cabbr Noh noh
+cabbr Q q
 cabbr Q! q!
-cabbr q1 q!
 cabbr Q1 q!
+cabbr q1 q!
+cabbr VS vs
+cabbr Vs vs
+cabbr SEt set
+cabbr Set set
+cabbr SP sp
+cabbr Sp sp
+cabbr SH sh 
+cabbr Sh sh
+cabbr W w
+cabbr Wq wq
+cabbr WQ wq
 cabbr vrc ~/.vimrc
+cabbr vvrc vi ~/.vimrc
+iabbr Calss Class
+iabbr calss class
+iabbr Clinet client
+iabbr clinet client
+iabbr Evnet Evnet
+iabbr evnet event
+iabbr FAlse False
+iabbr FLase False
+iabbr flase False
+iabbr Initalize Initialize
+iabbr initalize initialize
+iabbr Instnace Instance
+iabbr instnace instance
+iabbr pInstnace pInstance
+iabbr SUbject Subject
+iabbr SUBject Subject
+iabbr subejct subject
+iabbr Ture True
+iabbr ture true
+iabbr Tiem Time
+iabbr tiem time
+iabbr :W <ESC>:w<CR>
+iabbr :w <ESC>:w<CR>
+"iabbr :WQ <ESC>:wq<CR> WHY?
+"iabbr :Wq <ESC>:wq<CR>
+"iabbr :wq <ESC>:wq<CR>
 imap <F2> <C-N>
+nmap <F3> :DimInactiveOn<CR>
+imap <F3> <ESC><F3>i
+nmap <F4> :q<CR>
+nmap <F5> :TlistUpdateOn<CR>
+imap <F5> <ESC><F5>i
+nmap <F6> :UltiSnipsEdit<CR>i
+imap <F6> <ESC><F6>i
+nmap <F7> :vs<CR>
+imap <F7> <ESC><F7>i
+nmap <F8> :sp<CR>
+imap <F8> <ESC><F8>i
+
+"iabbr <expr> __pwd expand("%:p:h") ???
 
 " Start Vim at where you lastly worked 
-au BufReadPost *
-\ if line("'\"") > 0 && line("'\"") <= line("$") |
-\ exe "norm g`\"" |
-\ endif
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm g`\"" | endif
+
+" Recognize Pro*C file as C file to use Taglist and syntax highlight without
+" changing /usr/share/vim/vim80/filetype.vim
+au BufRead *.pc set filetype=c
 
 "func CmtOn() "Comment on
 "	exe "'<,'>norm i//"

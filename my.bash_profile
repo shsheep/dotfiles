@@ -5,6 +5,9 @@ if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
+PATH="$HOME/.local/bin:$PATH"
+export PATH
+
 # Define colors
 C_DEFAULT="\[\033[m\]"
 C_WHITE="\[\033[1m\]"
@@ -32,9 +35,14 @@ C_BG_PURPLE="\[\033[45m\]"
 C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
-export PS1="$C_LIGHTGREEN(╯°□°)�$C_DEFAULT[\u@\h \W]\n$ "
+stty -ixon
+
+export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\\n$C_GREEN\$$C_DEFAULT "
 
 # User specified environment and startup programs
+alias cd..="cd .. && ls"
+alias echi="echo"
+alias echp="echo"
 alias LS="ls"
 alias ll="ls -alF"
 alias vu="vi"
@@ -47,7 +55,11 @@ alias svrc="source ~/.vimrc"
 alias g__="g++"
 alias gpp="g++"
 alias a="./a.out"
+alias MC="make clean"
 alias mkae="make"
 alias amke="make"
 alias amek="make"
-
+alias gd="git diff"
+alias gs="git status"
+alias Grep="grep"
+alias grpe="grep"
