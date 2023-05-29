@@ -1,0 +1,24 @@
+{
+    "languageserver" : {
+        "ccls": {
+            "command": "ccls",
+            "filetypes": ["c", "cc", "cpp"],
+            "rootPatterns": [".ccls"],
+            "initializationOptions": {
+                "cache": {
+                    "directory": "/tmp/ccls"
+                }
+            }
+        },
+        "bash": {
+           "command": "bash-language-server",
+           "args": ["start"],
+           "filetypes": ["sh"]
+        },
+        "golang": {
+            "command": "~/go/bin/gopls",
+            "filetypes": ["go"],
+            "rootPatterns": ["go.mod"]
+        }
+    }
+}
