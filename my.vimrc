@@ -38,92 +38,111 @@ call plug#end()
 
 set nocompatible
 set backspace=indent,eol,start
-
 set path+=**
 set wildmenu
-
 set autoindent
 set smartindent
 set smarttab
 set tabstop=4
 set expandtab
 set shiftwidth=4
-
 set smartcase
+set ignorecase
 set hlsearch
-
 set number
 set ruler
-
 set mouse=a
-
 set syntax=on
 set title
-
 set ut=500
+set relativenumber
+set clipboard=unnamed
 
+autocmd FileType c set colorcolumn=80
+autocmd FileType cpp set colorcolumn=80
+autocmd FileType python set colorcolumn=80
+autocmd FileType vim set colorcolumn=80
 
+cabbr csf cs find
+cabbr Csf cs find
+cabbr CSf cs find
+cabbr CSF cs find
 cabbr CS cs
 cabbr Cs cs
-cabbr NOh noh
+cabbr Lw w
+cabbr LW w
 cabbr Noh noh
+cabbr NOh noh
 cabbr Q q
 cabbr Q! q!
 cabbr Q1 q!
 cabbr q1 q!
-cabbr VS vs
 cabbr Vs vs
-cabbr SEt set
+cabbr VS vs
 cabbr Set set
-cabbr SP sp
+cabbr SEt set
 cabbr Sp sp
-cabbr SH sh 
+cabbr SP sp
 cabbr Sh sh
+cabbr SH sh
 cabbr W w
 cabbr Wq wq
 cabbr WQ wq
 cabbr vrc ~/.vimrc
 cabbr vvrc vi ~/.vimrc
-iabbr Calss Class
+
+" Typical typo
 iabbr calss class
-iabbr Clinet client
+iabbr Calss Class
 iabbr clinet client
-iabbr Evnet Evnet
+iabbr Clinet client
 iabbr evnet event
+iabbr Evnet Evnet
 iabbr FAlse False
-iabbr FLase False
 iabbr flase False
-iabbr Initalize Initialize
+iabbr FLase False
 iabbr initalize initialize
-iabbr Instnace Instance
+iabbr Initalize Initialize
 iabbr instnace instance
+iabbr Instnace Instance
 iabbr pInstnace pInstance
+iabbr subejct subject
 iabbr SUbject Subject
 iabbr SUBject Subject
-iabbr subejct subject
-iabbr Ture True
+iabbr TRue True
 iabbr ture true
-iabbr Tiem Time
+iabbr Ture True
+iabbr TUre True
+iabbr THis This
 iabbr tiem time
+iabbr Tiem Time
+iabbr TIme Time
+" TODO
 iabbr :W <ESC>:w<CR>
 iabbr :w <ESC>:w<CR>
-"iabbr :WQ <ESC>:wq<CR> WHY?
-"iabbr :Wq <ESC>:wq<CR>
-"iabbr :wq <ESC>:wq<CR>
-imap <F2> <C-N>
-nmap <F3> :DimInactiveOn<CR>
-imap <F3> <ESC><F3>i
+
 nmap <F4> :q<CR>
 nmap <F5> :TlistUpdateOn<CR>
 imap <F5> <ESC><F5>i
 nmap <F6> :UltiSnipsEdit<CR>i
 imap <F6> <ESC><F6>i
-nmap <F7> :vs<CR>
-imap <F7> <ESC><F7>i
-nmap <F8> :sp<CR>
-imap <F8> <ESC><F8>i
+nmap <F9> ko{<ESC>jo}<ESC>
+imap <F9> <ESC><F9>i
+nmap <PageUp> :bn<CR>
+nmap <PageDown> :bp<CR>
 
-"iabbr <expr> __pwd expand("%:p:h") ???
+inoremap <C-j> <Left>
+inoremap <C-k> <Right>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-l> <Del>
+inoremap <C-d> <Del>
+
+iabbr <expr> __pwd expand("%:p:h")
+iabbr <expr> __time strftime("%Y-%m-%d %H:%M:%S")
+iabbr <expr> __date strftime("%Y-%m-%d")
+iabbr <expr> __file expand('%:p')
+iabbr <expr> __name expand('%')
 
 " Start Vim at where you lastly worked 
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm g`\"" | endif
@@ -132,27 +151,9 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm g`\"
 " changing /usr/share/vim/vim80/filetype.vim
 au BufRead *.pc set filetype=c
 
-"func CmtOn() "Comment on
-"	exe "'<,'>norm i//"
-"endfunc
-"
-"func CmtOff() "Comment off
-"	exe "'<,'>norm 2x"
-"endfunc
-" Why not work? => Reason : Vim recognizes <C-/> as <C-_>
-" But this function is a litle big poor
-" Let's skip this ones
-" <leader> means <\>
-"vmap <leader>/ <esc>:call CmtOn()<cr> 
-"vmap <leader>' <esc>:call CmtOff()<cr>
-"nmap <leader>/ <esc>v:call CmtOn()<cr>
-"nmap <leader>' <esc>v:call CmtOff()<cr>
-" and use the below ones
-
-" Start a long journey of binding shortcut for comment
-"TOPIC: Toggling Comment (via functions) 
-"FUNCTIONS: for toggle comments 
-"FUNCTIONS: set comment's prefix character based on filetype
+" TOPIC: Toggling Comment (via functions) 
+" FUNCTIONS: for toggle comments 
+" FUNCTIONS: set comment's prefix character based on filetype
 function! SetCommentPrefix()
     let s:comment_prefix = "#"
     if &filetype == "vim"

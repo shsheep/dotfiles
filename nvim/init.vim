@@ -202,7 +202,7 @@ iabbr <expr> __name expand('%')
 " Start Nvim at where you lastly worked
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm g'\"" | endif
 
-" Recognize fucking Pro*C file as C file to use Taglist and syntax highlight
+" Recognize Pro*C file as C file to use Taglist and syntax highlight
 " without changing /usr/share/vim/filetype.vim
 " au BufRead *.pc set filetype=c " I hate Pro*C
 
@@ -313,11 +313,3 @@ vnoremap <C-/> <ESC> :call ToggleCommentRange()<CR>
 inoremap <C-_> <ESC>:call ToggleCommentLine()<CR>i
 nnoremap <C-_> :call ToggleCommentLine()<CR>
 vnoremap <C-_> <ESC> :call ToggleCommentRange()<CR>
-
-if executable('vimscript-language-server')
-    au User lsp_setup call lsp#register_server({
-                \ 'name': 'vimscript-language-server',
-                \ 'cmd': {server_info->['vimscript-language-server']},
-                \ 'whitelist': ['vim'],
-                \ })
-endif
