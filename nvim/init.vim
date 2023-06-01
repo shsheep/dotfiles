@@ -113,12 +113,6 @@ autocmd FileType cpp set colorcolumn=80
 autocmd FileType python set colorcolumn=80
 autocmd FileType vim set colorcolumn=80
 
-cabbr csf cs find
-cabbr Csf cs find
-cabbr CSf cs find
-cabbr CSF cs find
-cabbr CS cs
-cabbr Cs cs
 cabbr Lw w
 cabbr LW w
 cabbr Noh noh
