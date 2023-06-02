@@ -81,7 +81,7 @@ endfor
 let s:file_plug_candidate = v:null
 
 " colorscheme molokai
-colorscheme gruvbox
+" colorscheme gruvbox
 
 " Settings for Rust
 autocmd FileType rust nmap <leader>R :RustRun<CR>
@@ -121,14 +121,21 @@ cabbr Q q
 cabbr Q! q!
 cabbr Q1 q!
 cabbr q1 q!
+cabbr Qa qa
+cabbr QA qa
+cabbr Qa! qa!
+cabbr QA! qa!
+cabbr Qa1 qa!
+cabbr QA1 qa!
+cabbr qa1 qa!
 cabbr Vs vs
 cabbr VS vs
 cabbr Set set
 cabbr SEt set
 cabbr Sp sp
 cabbr SP sp
-cabbr Sh sh
-cabbr SH sh
+" cabbr Sh sh
+" cabbr SH sh
 cabbr W w
 cabbr Wq wq
 cabbr WQ wq
@@ -209,7 +216,7 @@ function! SetCommentPrefix()
         let s:comment_prefix = "\" "
     elseif &filetype ==? "c"
                \ || &filetype ==? "h"
-               \ || &filetype ==? "cpp" 
+               \ || &filetype ==? "cpp"
                \ || &filetype ==? "hpp"
                \ || &filetype ==? "go"
                \ || &filetype ==? "rust"

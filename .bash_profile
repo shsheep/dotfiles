@@ -10,8 +10,6 @@ export EDITOR=nvim
 
 . "$HOME/.cargo/env"
 
-stty -ixon
-
 # Define colors
 C_DEFAULT="\[\033[m\]"
 C_WHITE="\[\033[1m\]"
@@ -39,16 +37,21 @@ C_BG_PURPLE="\[\033[45m\]"
 C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
-export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\\n$C_GREEN\$$C_DEFAULT "
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$C_LIGHTRED$(parse_git_branch)\n$C_GREEN\$$C_DEFAULT "
 
-# User specified environment and startup programs
+stty -ixon
+
+# User specific environment and startup programs
 alias a="./a.out"
 alias amek="make"
 alias amke="make"
-alias cd,,,,="cd .. && cd .. && ls"
+alias cd,,,,="cd ../.. && ls"
 alias cd,,="cd .. && ls"
 alias cd-="cd - && ls"
-alias cd....="cd .. && cd .. && ls"
+alias cd....="cd ../.. && ls"
 alias cd..="cd .. && ls"
 alias cd~="cd ~ && ls"
 alias cl="cat *.log"
@@ -56,6 +59,7 @@ alias clang-format="clang-format -style=file"
 alias devenv="cd ~/Workspace/dotfiles"
 alias echi="echo"
 alias echp="echo"
+alias g++="g++ -std=c++2a"
 alias gd="git diff"
 alias gdt="git difftool"
 alias gpp="g++"
@@ -66,6 +70,7 @@ alias Grpe="grep"
 alias grpe="grep"
 alias gs="git status"
 alias g__="g++"
+alias iv="nvim"
 alias ll="ls -alF"
 alias LS="ls"
 alias MC="make clean"
