@@ -1,92 +1,129 @@
 priority -50
 
-extends c
+# class cout cin for fori func str map vec
 
-# We want to overwrite everything in parent ft.
-priority -49
-###########################################################################
-#    Global functions   #
-###########################################################################
+# extends c
+# priority -49
 
 global !p
 
 def write_docstring_args(arglist, snip):
-	args = str(arglist).split(',')
+    args = str(arglist).split(',')
 
-	if len(args) > 1:
-	    c = 0
-		for arg in args:
-			if c == 0:
-				snip.rv += arg
-				c = 1
-			else:
-				snip += '*       : %s' % arg.strip()
-	else:
-		snip.rv = args[0]
+    if len(args) > 1:
+        c = 0
+        for arg in args:
+            if c == 0:
+                snip.rv += arg
+                c = 1
+            else:
+                snip += '*       : %s' % arg.strip()
+    else:
+        snip.rv = args[0]
 
 
 endglobal
 
-###########################################################################
-#                            TextMate Snippets                            #
-###########################################################################
-snippet @cl "class .. (class)"
-class ${1:`!p snip.rv = snip.basename or "name"`}
-{
-	public:
-		${1/(\w+).*/$1/} (${2:arguments});
-		virtual ~${1/(\w+).*/$1/} ();
+snippet class "class .. (class)"
+class ${1:`!p snip.rv = snip.basename or "name"`} {
+public:
+    ${1/(\w+).*/$1/} (${2:arguments});
+    virtual ~${1/(\w+).*/$1/} ();
 
-	private:
-		${0:/* data */}
+private:
+    ${0:/* data */}
 };
 endsnippet
 
+snippet co "std::cout <<" b
+std::cout << $1;$0
+endsnippet
+
+snippet ci "std::cin <<" b
+std::cin >> $1;$0
+endsnippet
+
+snippet for "for ( ... )" b
+for (${1:int} ${2:i} = ${3:0}; $2 < ${4:count}; ${5:++$2}) {
+    $6
+}$0
+
+endsnippet
+snippet fori "for (int i = ...)" b
+for (int ${1:i} = ${2:0}; $1 ${3:<} ${4:count}; ${5:++$1}) {
+    $5
+}$0
+endsnippet
+
+snippet func "Basic C++ doxygen function template" b
+/**
+* @brief: ${4:brief}
+* @param: `!p write_docstring_args(t[3],snip)`
+* @return: `!p snip.rv = t[1]`
+*/
+${1:ReturnType} ${2:FunctionName}(${3:param}) {
+    ${0:FunctionBody}
+}
+endsnippet
+
+# TODO - str, map, vec for non-declaration
+snippet map "std::map map" b
+std::map<${1:key}, ${2:int}> ${3:map};$0
+endsnippet
+
+snippet str "std::string str" b
+std::string ${1:str};$0
+endsnippet
+
+snippet templatecpp "C++ header include and main" 
+#include <algorithm>
+#include <array>
+#include <deque>
+#include <fstream>
+#include <iostream>
+#include <iterator>
+#include <limits>
+#include <list>
+#include <map>
+#include <queue>
+#include <regex>
+#include <set>
+#include <set>
+#include <sstream>
+#include <stack>
+#include <string>
+#include <tuple>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
+
+int main (int argc, char* argv[]) {
+    $0
+    return 0;
+}
+endsnippet
+
+snippet vec "std::vector vec" b
+std::vector<${1:int}> ${2:vec};$0
+endsnippet
+
+# TODO
 snippet @cla "An entire .h generator" b
 #ifndef ${2:`!v substitute(vim_snippets#Filename('$1_H','ClassName'),'.*','\U&\E','')`}
 #define $2
 
 class ${1:`!v substitute(substitute(vim_snippets#Filename('$1','ClassName'),'^.','\u&',''), '_\(\w\)', '\u\1', 'g')`}
 {
-	private:
-		$3
+    private:
+        $3
 
-	public:
-		$1();
-		virtual ~$1();
+    public:
+        $1();
+        virtual ~$1();
 };
 
 #endif /* $2 */
-endsnippet
-
-snippet @co "std::cout <<"
-std::cout << $0
-endsnippet
-
-snippet @fnc "Basic c++ doxygen function template" b
-/**
-* @brief: ${4:brief}
-*
-* @param: `!p write_docstring_args(t[3],snip)`
-*
-* @return: `!p snip.rv = t[1]`
-*/
-${1:ReturnType} ${2:FunctionName}(${3:param})
-{
-	${0:FunctionBody}
-}
-endsnippet
-
-snippet @str "std::string str"
-std::string str$0;
-endsnippet
-
-snippet @map "std::map map"
-std::map<${1:key}, ${2:int}> map$0;
-endsnippet
-
-snippet @vec "std::vector vec"
-std::vector<${1:int}> vec$0;
 endsnippet
 
 #===============================Barely Used===============================#
@@ -116,4 +153,3 @@ snippet tp "template <typename ..> (template)"
 template <typename ${1:_InputIter}>
 endsnippet
 # vim:ft=snippets:
-

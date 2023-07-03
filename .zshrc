@@ -105,6 +105,10 @@ alias cd....="cd .. && cd .. && ls"
 alias cd..="cd .. && ls"
 alias cd~="cd ~ && ls"
 alias devenv="cd ~/Workspace/dotfiles"
+alias di="docker images"
+alias doc="docker"
+alias dp="docker ps"
+alias dpa="docker ps -a"
 alias cl="cat *.log"
 alias clang-format="clang-format -style=file"
 alias echi="echo"
@@ -142,3 +146,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/Workspace/vimscript-language-server/target/debug"
+export PATH="$PATH:$HOME/Workspace/prometheus-2.45.0-rc.1.darwin-amd64"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

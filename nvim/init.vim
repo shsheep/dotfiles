@@ -134,13 +134,17 @@ cabbr Set set
 cabbr SEt set
 cabbr Sp sp
 cabbr SP sp
-" cabbr Sh sh
-" cabbr SH sh
 cabbr W w
 cabbr Wq wq
 cabbr WQ wq
 cabbr vrc ~/.config/nvim/init.vim
 cabbr vvrc vi ~/.config/nvim/init.vim
+
+iabbr <expr> __pwd expand("%:p:h")
+iabbr <expr> __time strftime("%Y-%m-%d %H:%M:%S")
+iabbr <expr> __date strftime("%Y-%m-%d")
+iabbr <expr> __file expand('%:p')
+iabbr <expr> __name expand('%')
 
 " Typical typo
 iabbr calss class
@@ -150,7 +154,7 @@ iabbr Clinet client
 iabbr evnet event
 iabbr Evnet Evnet
 iabbr FAlse False
-iabbr flase False
+iabbr flase false
 iabbr FLase False
 iabbr initalize initialize
 iabbr Initalize Initialize
@@ -161,22 +165,30 @@ iabbr subejct subject
 iabbr SUbject Subject
 iabbr SUBject Subject
 iabbr TRue True
-iabbr ture true
-iabbr Ture True
 iabbr TUre True
+iabbr Ture True
+iabbr ture true
 iabbr THis This
 iabbr tiem time
 iabbr Tiem Time
 iabbr TIme Time
-" TODO
-iabbr :W <ESC>:w<CR>
-iabbr :w <ESC>:w<CR>
 
 nmap <F4> :q<CR>
 nmap <F9> ko{<ESC>jo}<ESC>
 imap <F9> <ESC><F9>i
-nmap <PageUp> :bn<CR>
-nmap <PageDown> :bp<CR>
+nmap <silent> <PageUp> :bn<CR>
+nmap <silent> <PageDown> :bp<CR>
+nmap ciq ci'
+nmap ciQ ci"
+nmap csq cs'
+nmap csQ cs"
+nmap dsq ds'
+nmap dsQ ds"
+nmap viq vi'
+nmap viQ vi"
+nmap ysiwq ysiw'
+nmap ysiwQ ysiw"
+nmap ysiWQ ysiW"
 
 inoremap <C-j> <Left>
 inoremap <C-k> <Right>
@@ -193,12 +205,6 @@ cnoremap <C-k> <Right>
 cnoremap <C-l> <Del>
 cnoremap <C-g> <C-Left>
 cnoremap <C-;> <C-Right>
-
-iabbr <expr> __pwd expand("%:p:h")
-iabbr <expr> __time strftime("%Y-%m-%d %H:%M:%S")
-iabbr <expr> __date strftime("%Y-%m-%d")
-iabbr <expr> __file expand('%:p')
-iabbr <expr> __name expand('%')
 
 " Start Nvim at where you lastly worked
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm g'\"" | endif
