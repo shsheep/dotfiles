@@ -7,6 +7,9 @@ function! s:plug_file( ... )
 endfunction
 
 call plug#begin('~/.nvim/plugged')
+
+PlugFile 'set-plugfile.vim'
+
 Plug 'fatih/molokai'
 " let g:molokai_original = 1
 
@@ -72,6 +75,11 @@ Plug 'sotte/presenting.vim'
 Plug 'airblade/vim-gitgutter'
 
 " Plug 'bling/vim-bufferline'
+
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'folke/neodev.nvim'
+    PlugFile 'set-nvim-dap.vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -80,7 +88,7 @@ for include_file in s:file_plug_candidate
 endfor
 let s:file_plug_candidate = v:null
 
-" colorscheme molokai
+colorscheme molokai
 " colorscheme gruvbox
 
 " Settings for Rust
@@ -110,6 +118,7 @@ set clipboard=unnamed
 
 autocmd FileType c set colorcolumn=80
 autocmd FileType cpp set colorcolumn=80
+autocmd FileType cpp set equalprg="clang-format -style=file"
 autocmd FileType python set colorcolumn=80
 autocmd FileType vim set colorcolumn=80
 
@@ -174,8 +183,6 @@ iabbr Tiem Time
 iabbr TIme Time
 
 nmap <F4> :q<CR>
-nmap <F9> ko{<ESC>jo}<ESC>
-imap <F9> <ESC><F9>i
 nmap <silent> <PageUp> :bn<CR>
 nmap <silent> <PageDown> :bp<CR>
 nmap ciq ci'
