@@ -5,7 +5,7 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
-export PATH=$PATH:/usr/local/go/bin:/home/shsheep/.local/bin
+export PATH=$PATH:/home/shsheep/go/bin:/home/shsheep/.local/bin
 export EDITOR=nvim
 
 . "$HOME/.cargo/env"
@@ -84,4 +84,5 @@ alias vi="nvim"
 alias vo="nvim"
 alias vrc="~/.config/nvim/init.vim"
 alias vu="nvim"
+alias vvi="vim"
 alias vvrc="nvim ~/.config/nvim/init.vim"
