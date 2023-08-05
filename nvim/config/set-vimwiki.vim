@@ -6,6 +6,11 @@ let g:vimwiki_list = [
 \   'diary_rel_path': '.',
 \},
 \{
+\   'path': '/Users/shsheep/Workspace/shsheepwiki/_wiki',
+\   'ext' : '.md',
+\   'diary_rel_path': '.',
+\},
+\{
 \   'path': '/Users/shsheep/shsheep/Diary/wiki',
 \   'ext' : '.md',
 \   'diary_rel_path': '.',

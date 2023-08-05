@@ -116,6 +116,7 @@ alias echp="echo"
 alias gd="git diff"
 alias gdt="git difftool"
 alias gpp="g++ -std=c++2a"
+alias g++="g++ -std=c++2a"
 alias GRep="grep"
 alias Grep="grep"
 alias GRpe="grep"
@@ -135,8 +136,10 @@ alias vi="nvim"
 alias vo="nvim"
 alias vrc="~/.config/nvim/init.vim"
 alias vu="nvim"
+alias vvi="\vi"
 alias vvrc="nvim ~/.config/nvim/init.vim"
 alias vzr="nvim ~/.zshrc"
+alias wiki="cd ~/Workspace/shsheepwiki"
 
 export PATH=$PATH:~/Downloads/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$HOME/.rbenv/bin
 export EDITOR=nvim

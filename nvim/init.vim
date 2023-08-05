@@ -80,14 +80,20 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'folke/neodev.nvim'
     PlugFile 'set-nvim-dap.vim'
+
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown' 
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
 
 for include_file in s:file_plug_candidate
     execute "source " . include_file
 endfor
 let s:file_plug_candidate = v:null
 
+let g:vim_markdown_folding_disabled = 1
 colorscheme molokai
 " colorscheme gruvbox
 
@@ -118,7 +124,7 @@ set clipboard=unnamed
 
 autocmd FileType c set colorcolumn=80
 autocmd FileType cpp set colorcolumn=80
-autocmd FileType cpp set equalprg="clang-format -style=file"
+autocmd FileType cpp set equalprg=clang-format\ -style=file
 autocmd FileType python set colorcolumn=80
 autocmd FileType vim set colorcolumn=80
 
@@ -197,8 +203,6 @@ nmap ysiwq ysiw'
 nmap ysiwQ ysiw"
 nmap ysiWQ ysiW"
 
-inoremap <C-j> <Left>
-inoremap <C-k> <Right>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-l> <Del>
