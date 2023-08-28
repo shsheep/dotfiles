@@ -38,9 +38,18 @@ C_BG_CYAN="\[\033[46m\]"
 C_BG_LIGHTGRAY="\[\033[47m\]"
 
 parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    git status --short 2> /dev/null 1> /dev/null
+    if [ $? -ne 0 ]; then
+        return 1
+    fi
+
+    cur_branch=$(git branch --show-current)
+    file_status=$(git status --short | awk '{print $1}' | sort | uniq -c | tr '\n' ' ' | sed -E 's/([0-9]+) /\1/g; s/  */ /g; s/ *$//')
+    stash_size=$(git stash list | wc -l | sed 's/ //g')
+    printf " ($cur_branch)$file_status $stash_size"
 }
-export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$C_LIGHTRED$(parse_git_branch)\n$C_GREEN\$$C_DEFAULT "
+# Should use single quote
+PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[1;31m\]$(parse_git_branch)\n\[\033[32m\]\$\[\033[m\] '
 
 stty -ixon
 
