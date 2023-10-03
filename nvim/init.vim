@@ -202,6 +202,7 @@ nmap viQ vi"
 nmap ysiwq ysiw'
 nmap ysiwQ ysiw"
 nmap ysiWQ ysiW"
+nmap -G :noh<CR>
 
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>

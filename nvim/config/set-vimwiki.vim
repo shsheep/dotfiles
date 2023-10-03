@@ -27,6 +27,7 @@ nmap <LocalLeader>ww <Plug>VimwikiIndex
 nmap <LocalLeader>wi <Plug>VimwikiDiaryIndex
 nmap <LocalLeader>w<LocalLeader>w <Plug>VimwikiMakeDiaryNote
 nmap <LocalLeader>wt :VimwikiTable<CR>
+" let g:vimwiki_key_mappings = { 'all_maps': 0, }
 
 let g:md_modify_disabled = 0
 function! LastModified()
@@ -85,6 +86,7 @@ function! NewTemplate()
 
     echom 'new wiki page has created'
 endfunction
+
 augroup vimwikiauto
     autocmd BufWritePre *wiki/*.md call LastModified()
     autocmd BufRead,BufNewFile *wiki/*.md call NewTemplate()

@@ -71,6 +71,7 @@ ZSH_THEME="af-magic"
 plugins=(git docker pip golang rust)
 
 source $ZSH/oh-my-zsh.sh
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 # User configuration
 
@@ -150,5 +151,5 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:$HOME/Workspace/vimscript-language-server/target/debug"
 export PATH="$PATH:$HOME/Workspace/prometheus-2.45.0-rc.1.darwin-amd64"
-
+export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
