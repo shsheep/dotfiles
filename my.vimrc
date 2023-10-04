@@ -1,15 +1,14 @@
 " VIM-PLUG
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
-
 " Multiple Plug commands can be written in a single line using | separators
-
 Plug 'SirVer/ultisnips'
 let g:UltiSnipsExpandTrigger="<Tab>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetDirectories = ['~/.vim/plugged/namo']
+let g:UltiSnipsSnippetDirectories = ['~/Workspace/dotfiles/snippets']
+
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -32,9 +31,15 @@ let g:diminactive_use_syntax=0
 autocmd VimEnter * DimInactiveColorcolumnOn
 
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+
+Plug 'airblade/vim-gitgutter'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+let g:termdebug_wide = 1
 
 set nocompatible
 set backspace=indent,eol,start
@@ -77,6 +82,13 @@ cabbr Q q
 cabbr Q! q!
 cabbr Q1 q!
 cabbr q1 q!
+cabbr Qa qa
+cabbr QA qa
+cabbr Qa! qa!
+cabbr QA! qa!
+cabbr Qa1 qa!
+cabbr QA1 qa!
+cabbr qa1 qa!
 cabbr Vs vs
 cabbr VS vs
 cabbr Set set
@@ -130,6 +142,20 @@ nmap <F9> ko{<ESC>jo}<ESC>
 imap <F9> <ESC><F9>i
 nmap <PageUp> :bn<CR>
 nmap <PageDown> :bp<CR>
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap ciq ci'
+nmap ciQ ci"
+nmap csq cs'
+nmap csQ cs"
+nmap dsq ds'
+nmap dsQ ds"
+nmap viq vi'
+nmap viQ vi"
+nmap ysiwq ysiw'
+nmap ysiwQ ysiw"
+nmap ysiWQ ysiW"
+nmap -G :noh<CR>
 
 inoremap <C-j> <Left>
 inoremap <C-k> <Right>
@@ -137,6 +163,7 @@ inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-l> <Del>
 inoremap <C-d> <Del>
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 iabbr <expr> __pwd expand("%:p:h")
 iabbr <expr> __time strftime("%Y-%m-%d %H:%M:%S")

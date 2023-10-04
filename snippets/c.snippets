@@ -8,7 +8,7 @@ snippet con "clang on"
 // clang-format on
 endsnippet
 
-snippet def "#define ..." b
+snippet "^#?def" "#define ..." r
 #define $0
 endsnippet
 
@@ -63,7 +63,7 @@ snippet #ifndef "#ifndef ... #define ... #endif"
 #endif /* ifndef $1 */
 endsnippet
 
-snippet inc "#include <...>" b
+snippet "^#?inc" "#include <...>" r
 #include <$1>$0
 endsnippet
 
