@@ -19,6 +19,7 @@ autocmd VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeWinSize=25
 
+Plug 'yegappan/taglist'
 let Tlist_Use_Right_Window=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Auto_Open=1
@@ -62,6 +63,7 @@ set title
 set ut=500
 set relativenumber
 set clipboard=unnamed
+set encoding=utf-8
 
 autocmd FileType c set colorcolumn=80
 autocmd FileType cpp set colorcolumn=80
@@ -300,14 +302,14 @@ if has("cscope")
 	nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 	nmap <C-\>d :cs find d ^<C-R>=expand("<cword>")<CR><CR>
 
-	nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
-	nmap <C-@>i :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-	nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+	nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+	nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+	nmap <C-@>d :cs find d ^<C-R>=expand("<cword>")<CR><CR>
 
 	nmap <C-@><C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
 	nmap <C-@><C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
