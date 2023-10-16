@@ -5,8 +5,8 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
-export PATH=$PATH:/home/shsheep/go/bin:/home/shsheep/.local/bin
-export EDITOR=nvim
+export PATH=$PATH:/home/shsheep/go/bin:/home/shsheep/.local/bin:/usr/local/go/bin
+export EDITOR=vim
 
 . "$HOME/.cargo/env"
 
@@ -79,19 +79,21 @@ alias Grpe="grep"
 alias grpe="grep"
 alias gs="git status"
 alias g__="g++"
-alias iv="nvim"
+alias iv="vim"
 alias ll="ls -alF"
+alias llrt="ls -alrt"
 alias LS="ls"
 alias MC="make clean"
 alias mkae="make"
-alias nvrc="nvim ~/.config/nvim/init.vim"
+alias nv="nvim"
+alias nvrc="vim ~/.vimrc"
 alias rml="rm -f *.log"
 alias sbp="source ~/.bash_profile"
 alias tfl="tail -f *.log"
-alias vbp="nvim ~/.bash_profile"
-alias vi="nvim"
-alias vo="nvim"
-alias vrc="~/.config/nvim/init.vim"
-alias vu="nvim"
+alias vbp="vim ~/.bash_profile"
+alias vi="vim"
+alias vo="vim"
+alias vrc="~/.vimrc"
+alias vu="vim"
 alias vvi="vim"
-alias vvrc="nvim ~/.config/nvim/init.vim"
+alias vvrc="vim ~/.vimrc"
