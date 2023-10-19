@@ -11,12 +11,6 @@ endfunction
 " Settings for Go 
 autocmd FileType go nmap ]c :cnext<CR>
 autocmd FileType go nmap [c :cprev<CR>
-
-" autocmd FileType go nmap <leader>B <Plug>(go-build)
-" autocmd FileType go nmap <leader>d :GoDoc<CR>
-" autocmd FileType go nmap <leader>i :GoInfo<CR>
-" autocmd FileType go nmap vgd :vs<CR>gd
-" autocmd FileType go nmap hgd :sp<CR>gd
 autocmd FileType go nmap <C-\>d :GoDoc<CR>
 autocmd FileType go nmap gi :GoInfo<CR>
 autocmd FileType go nmap gr :GoReferrers<CR>
