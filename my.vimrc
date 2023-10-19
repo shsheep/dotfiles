@@ -34,8 +34,13 @@ autocmd VimEnter * DimInactiveColorcolumnOn
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-
 Plug 'airblade/vim-gitgutter'
+Plug 'puremourning/vimspector'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/molokai'
+Plug 'morhetz/gruvbox'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'rust-lang/rust.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -172,6 +177,40 @@ iabbr <expr> __time strftime("%Y-%m-%d %H:%M:%S")
 iabbr <expr> __date strftime("%Y-%m-%d")
 iabbr <expr> __file expand('%:p')
 iabbr <expr> __name expand('%')
+
+" vim-go
+let g:go_code_completion_enable = 0
+function! s:build_go_files()
+    let l:file = expand('%')
+    if l:file =~# '^\f\+_test\.go$'
+        call go#test#Test(0, 1)
+    elseif l:file =~# '^\f\+\.go$'
+        call go#cmd#Build(0)
+    endif
+endfunction
+
+" Settings for Go
+autocmd FileType go nmap ]c :cnext<CR>
+autocmd FileType go nmap [c :cprev<CR>
+autocmd FileType go nmap <C-\>d :GoDoc<CR>
+autocmd FileType go nmap gi :GoInfo<CR>
+autocmd FileType go nmap gr :GoReferrers<CR>
+autocmd FileType go nmap <leader>B :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <leader>R <Plug>(go-run)
+autocmd FileType go set colorcolumn=80
+
+" vimspector
+nnoremap <Leader>dd :call vimspector#Launch()<CR>
+nnoremap <Leader>de :call vimspector#Reset()<CR>
+nnoremap <Leader>dc :call vimspector#Continue()<CR>
+
+nnoremap <Leader>dt :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <Leader>dT :call vimspector#ClearBreakpoints()<CR>
+
+nmap <Leader>dk <Plug>VimspectorRestart
+nmap <Leader>dh <Plug>VimspectorStepOut
+nmap <Leader>dl <Plug>VimspectorStepInto
+nmap <Leader>dj <Plug>VimspectorStepOver
 
 " Start Vim at where you lastly worked 
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm g`\"" | endif
