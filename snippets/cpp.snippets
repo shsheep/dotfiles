@@ -121,12 +121,6 @@ int main (int argc, char* argv[]) {
 }
 endsnippet
 
-snippet wh "while ( ... ) {" b
-while (${1:condition}) {
-    $0
-}
-endsnippet
-
 # TODO
 snippet @cla "An entire .h generator" b
 #ifndef ${2:`!v substitute(vim_snippets#Filename('$1_H','ClassName'),'.*','\U&\E','')`}
