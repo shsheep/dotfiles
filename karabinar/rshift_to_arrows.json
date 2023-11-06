@@ -1,0 +1,1524 @@
+{
+    "title": "Convert to right shift + [ ; ' / to arrows",
+    "rules": [
+        {
+            "description":"Convert to right shift + [ ; ' / to arrows",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "open_bracket",
+                        "modifiers": {
+                            "mandatory": ["right_shift"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "semicolon",
+                        "modifiers": {
+                            "mandatory": ["right_shift"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "quote",
+                        "modifiers": {
+                            "mandatory": ["right_shift"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "slash",
+                        "modifiers": {
+                            "mandatory": ["right_shift"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "down_arrow"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description":"Add shift key modifier to arrow mappings",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "open_bracket",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow",
+                            "modifiers": "left_shift"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "semicolon",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": "left_shift"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "quote",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": "left_shift"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "slash",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "down_arrow",
+                            "modifiers": "left_shift"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description":"Add option key modifier to arrow mappings",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "open_bracket",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow",
+                            "modifiers": "option"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "semicolon",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": "option"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "quote",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": "option"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "slash",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "down_arrow",
+                            "modifiers": "option"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description":"Add shift + option key modifier to arrow mappings",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "open_bracket",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "option",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow",
+                            "modifiers": [
+                                "option",
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "semicolon",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "option",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "option",
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "quote",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "option",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "option",
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "slash",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "option",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "down_arrow",
+                            "modifiers": [
+                                "option",
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description":"Add command key modifier to arrow mappings",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "open_bracket",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow",
+                            "modifiers": "command"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "semicolon",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": "command"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "quote",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": "command"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "slash",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "down_arrow",
+                            "modifiers": "command"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description":"Add shfit + command key modifier to arrow mappings",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "open_bracket",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "command",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow",
+                            "modifiers": [
+                                "command",
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "semicolon",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "command",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "command",
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "quote",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "command",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "command",
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "slash",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "command",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "down_arrow",
+                            "modifiers": [
+                                "command",
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description":"Add option + command key modifier to arrow mappings",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "open_bracket",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "option",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow",
+                            "modifiers": [
+                                "option",
+                                "command"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "semicolon",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "option",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "option",
+                                "command"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "quote",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "option",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "option",
+                                "command"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "slash",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "option",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "down_arrow",
+                            "modifiers": [
+                                "option",
+                                "command"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description":"Add page up/down and home/end with right shift",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "page_up"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "period",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "page_down"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "k",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "home"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "comma",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "end"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description":"Add shift key modifier to page up/down, home/end mappings",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "page_up",
+                            "modifiers": [
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "period",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "left_shift"
+
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "page_down",
+                            "modifiers": [
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "k",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "left_shift"
+
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "home",
+                            "modifiers": [
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "comma",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "left_shift"
+
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "end",
+                            "modifiers": [
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description":"Add command + shift key modifier to page up/down, home/end mappings",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "page_up",
+                            "modifiers": [
+                                "command"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "period",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "page_down",
+                            "modifiers": [
+                                "command"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "k",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "home",
+                            "modifiers": [
+                                "command"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "comma",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "end",
+                            "modifiers": [
+                                "command"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description":"Add control + shift key modifier to page up/down, home/end mappings",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "left_shift",
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "page_up",
+                            "modifiers": [
+                                "left_shift",
+                                "control"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "period",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "left_shift",
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "page_down",
+                            "modifiers": [
+                                "left_shift",
+                                "control"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "k",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "left_shift",
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "home",
+                            "modifiers": [
+                                "left_shift",
+                                "control"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "comma",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "left_shift",
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "end",
+                            "modifiers": [
+                                "left_shift",
+                                "control"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description":"Add control key modifier to page up/down, home/end mappings",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "page_up",
+                            "modifiers": [
+                                "control"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "period",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "page_down",
+                            "modifiers": [
+                                "control"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "k",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "home",
+                            "modifiers": [
+                                "control"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "comma",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift",
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "end",
+                            "modifiers": [
+                                "control"
+                            ]
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.kakao\\.KakaoTalkMac$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

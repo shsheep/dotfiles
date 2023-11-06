@@ -1,0 +1,47 @@
+{
+    "title": "Convert to english input when pressing ctrl-c",
+    "rules": [
+        {
+            "description":"Convert to english input when pressing ctrl-c",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "c",
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "c",
+                            "modifiers": "control"
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "select_input_source": {
+                                "language": "en"
+                            }
+                        },
+                        {
+                            "key_code": "escape"
+                        }
+                    ],
+                    "conditions": [ 
+                        { 
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2$",
+                                "^com\\.google\\.Chrome$",
+                                "^com\\.jetbrains\\.intellij\\.ce$"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
