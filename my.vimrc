@@ -223,14 +223,14 @@ au BufRead *.pc set filetype=c
 " FUNCTIONS: for toggle comments 
 " FUNCTIONS: set comment's prefix character based on filetype
 function! SetCommentPrefix()
-    let s:comment_prefix = "#"
+    let s:comment_prefix = "# "
     if &filetype == "vim"
         " for vim, inline comment start with \"
-        let s:comment_prefix = "\""
+        let s:comment_prefix = "\" "
     elseif &filetype ==? "c" || &filetype ==? "h" || &filetype ==? "cpp" || &filetype ==? "hpp"
-        let s:comment_prefix = "//"
+        let s:comment_prefix = "// "
 	elseif &filetype ==? "py"
-		let s:comment_prefix = "#"
+		let s:comment_prefix = "# "
     endif
 endfunction
 
