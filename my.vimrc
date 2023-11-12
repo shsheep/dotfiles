@@ -40,6 +40,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'fatih/molokai'
 Plug 'morhetz/gruvbox'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'AndrewRadev/linediff.vim'
 Plug 'rust-lang/rust.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
