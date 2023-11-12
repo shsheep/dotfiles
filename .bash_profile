@@ -49,7 +49,7 @@ parse_git_branch() {
     printf " ($cur_branch)$file_status $stash_size"
 }
 # Should use single quote
-PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[1;31m\]$(parse_git_branch)\n\[\033[32m\]\$\[\033[m\] '
+export PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[1;31m\]$(parse_git_branch)\n\[\033[32m\]\$\[\033[m\] '
 
 stty -ixon
 
