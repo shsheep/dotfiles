@@ -35,6 +35,7 @@
                             "type": "frontmost_application_if",
                             "bundle_identifiers": [
                                 "^com\\.googlecode\\.iterm2$",
+                                "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.jetbrains\\.intellij\\.ce$"
                             ]
