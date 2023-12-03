@@ -97,5 +97,6 @@ alias vrc="~/.vimrc"
 alias vu="vim"
 alias vvi="vim"
 alias vvrc="vim ~/.vimrc"
+alias wiki="cd ~/Workspace/shsheepwiki"
 
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
