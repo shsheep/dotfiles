@@ -1,4 +1,4 @@
-let g:config_dir = expand('~/.nvim/config/')
+let g:config_dir = expand('~/.config/nvim/config/')
 let s:file_plug_candidate = []
 
 command! -nargs=1 PlugFile call <SID>plug_file(<args>)
@@ -202,6 +202,8 @@ nmap viQ vi"
 nmap ysiwq ysiw'
 nmap ysiwQ ysiw"
 nmap ysiWQ ysiW"
+vmap SQ S"
+vmap Sq S'
 nmap -G :noh<CR>
 
 inoremap <C-b> <Left>

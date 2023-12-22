@@ -68,11 +68,22 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker pip golang rust)
+plugins=(git docker pip golang rust fzf)
 
 source $ZSH/oh-my-zsh.sh
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+parse_git_branch() {
+    git status --short 2> /dev/null 1> /dev/null
+    if [ $? -ne 0 ]; then
+        return 1
+    fi
+
+    cur_branch=$(git branch --show-current)
+    file_status=$(git status --short | awk '{print $1}' | sort | uniq -c | tr '\n' ' ' | sed -E 's/([0-9]+) /\1/g; s/  */ /g; s/ *$//')
+    stash_size=$(git stash list | wc -l | sed 's/ //g')
+    printf " ($cur_branch)$file_status $stash_size"
+}
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -90,6 +101,9 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -99,6 +113,7 @@ alias a="./a.out"
 alias a="./a.out"
 alias amek="make"
 alias amke="make"
+alias c="curl"
 alias cd,,,,="cd .. && cd .. && ls"
 alias cd,,="cd .. && ls"
 alias cd-="cd - && ls"
@@ -144,14 +159,13 @@ alias vvrc="nvim ~/.config/nvim/init.vim"
 alias vzr="nvim ~/.zshrc"
 alias wiki="cd ~/Workspace/shsheepwiki"
 
-export PATH=$PATH:~/Downloads/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$HOME/.rbenv/bin
+export PATH=$PATH:$HOME/.rbenv/bin
 export EDITOR=nvim
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="$PATH:$HOME/Workspace/vimscript-language-server/target/debug"
-export PATH="$PATH:$HOME/Workspace/prometheus-2.45.0-rc.1.darwin-amd64"
+export PATH="$PATH:/opt/homebrew/bin"
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

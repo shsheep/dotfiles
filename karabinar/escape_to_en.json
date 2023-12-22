@@ -36,7 +36,9 @@
                                 "^com\\.googlecode\\.iterm2$",
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
-                                "^com\\.jetbrains\\.intellij\\.ce$"
+                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.tinyspeck\\.slackmacgap$",
+                                "^com\\.apple\\.Notes$"
                             ]
                         }
                     ]

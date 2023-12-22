@@ -1,5 +1,5 @@
 #!/bin/bash
-ln escape_to_en.json ~/Workspace/dotfiles/karabinar/escape_to_en.json
-ln home_and_end.json ~/Workspace/dotfiles/karabinar/home_and_end.json
-ln rshift_to_arrows.json ~/Workspace/dotfiles/karabinar/rshift_to_arrows.json
-ln shift_home_and_end.json ~/Workspace/dotfiles/karabinar/shift_home_and_end.json
+ln -s ~/Workspace/dotfiles/karabinar/escape_to_en.json escape_to_en.json
+ln -s ~/Workspace/dotfiles/karabinar/home_and_end.json home_and_end.json
+ln -s ~/Workspace/dotfiles/karabinar/rshift_to_arrows.json rshift_to_arrows.json
+ln -s ~/Workspace/dotfiles/karabinar/shift_home_and_end.json shift_home_and_end.json
