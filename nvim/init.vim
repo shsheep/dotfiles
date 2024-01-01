@@ -143,6 +143,8 @@ cabbr QA! qa!
 cabbr Qa1 qa!
 cabbr QA1 qa!
 cabbr qa1 qa!
+cabbr qA! qa!
+cabbr qA1 qa!
 cabbr Vs vs
 cabbr VS vs
 cabbr Set set

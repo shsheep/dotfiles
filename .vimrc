@@ -19,26 +19,25 @@ autocmd VimEnter * NERDTree | wincmd p
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeWinSize=25
 
-Plug 'yegappan/taglist'
-let Tlist_Use_Right_Window=1
-let Tlist_Exit_OnlyWindow=1
-let Tlist_Auto_Open=1
-let Tlist_WinWidth=25
+" Plug 'yegappan/taglist'
+" let Tlist_Use_Right_Window=1
+" let Tlist_Exit_OnlyWindow=1
+" let Tlist_Auto_Open=1
+" let Tlist_WinWidth=25
 
-" Plug 'preservim/tagbar'
-" autocmd VimEnter * Tagbar
-" let g:tagbar_sort = 0
-" let g:tagbar_width = 22
-" let g:tagbar_ctags_bin = /opt/homebrew/bin/ctags
-" let g:Tlist_Ctags_Cmd = /opt/homebrew/bin/ctags
-" nmap <F5> :Tagbar<CR>:Tagbar<CR>
-" imap <F5> <ESC><F5>i
+Plug 'preservim/tagbar'
+autocmd VimEnter * Tagbar
+let g:tagbar_sort = 0
+let g:tagbar_width = 22
+let g:tagbar_ctags_bin = 'opt/homebrew/bin/ctags'
+let g:Tlist_Ctags_Cmd = '/opt/homebrew/bin/ctags'
+nmap <F5> :Tagbar<CR>:Tagbar<CR>
+imap <F5> <ESC><F5>i
 
 " Diminactive
 Plug 'blueyed/vim-diminactive'
 hi ColorColumn  ctermbg=0 guibg=#eee8d5
 let g:diminactive_use_syntax=0
-autocmd VimEnter * DimInactiveColorcolumnOn
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -203,6 +202,8 @@ cabbr QA! qa!
 cabbr Qa1 qa!
 cabbr QA1 qa!
 cabbr qa1 qa!
+cabbr qA! qa!
+cabbr qA1 qa!
 cabbr Vs vs
 cabbr VS vs
 cabbr Set set
@@ -269,6 +270,8 @@ nmap viQ vi"
 nmap ysiwq ysiw'
 nmap ysiwQ ysiw"
 nmap ysiWQ ysiW"
+vmap SQ S"
+vmap Sq S'
 nmap -G :noh<CR>
 
 inoremap <C-j> <Left>
@@ -304,16 +307,14 @@ autocmd FileType go nmap gi :GoInfo<CR>
 autocmd FileType go nmap gr :GoReferrers<CR>
 autocmd FileType go nmap <leader>B :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>R <Plug>(go-run)
-autocmd FileType go set colorcolumn=80
+autocmd FileType go set colorcolumn=99
 
 " vimspector
 nnoremap <Leader>dd :call vimspector#Launch()<CR>
 nnoremap <Leader>de :call vimspector#Reset()<CR>
 nnoremap <Leader>dc :call vimspector#Continue()<CR>
-
 nnoremap <Leader>dt :call vimspector#ToggleBreakpoint()<CR>
 nnoremap <Leader>dT :call vimspector#ClearBreakpoints()<CR>
-
 nmap <Leader>dk <Plug>VimspectorRestart
 nmap <Leader>dh <Plug>VimspectorStepOut
 nmap <Leader>dl <Plug>VimspectorStepInto
