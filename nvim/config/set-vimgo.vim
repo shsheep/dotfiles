@@ -16,4 +16,4 @@ autocmd FileType go nmap gi :GoInfo<CR>
 autocmd FileType go nmap gr :GoReferrers<CR>
 autocmd FileType go nmap <leader>B :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>R <Plug>(go-run)
-autocmd FileType go set colorcolumn=80
+autocmd FileType go set colorcolumn=99

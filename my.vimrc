@@ -25,6 +25,15 @@ let Tlist_Exit_OnlyWindow=1
 let Tlist_Auto_Open=1
 let Tlist_WinWidth=25
 
+" Plug 'preservim/tagbar'
+" autocmd VimEnter * Tagbar
+" let g:tagbar_sort = 0
+" let g:tagbar_width = 22
+" let g:tagbar_ctags_bin = /opt/homebrew/bin/ctags
+" let g:Tlist_Ctags_Cmd = /opt/homebrew/bin/ctags
+" nmap <F5> :Tagbar<CR>:Tagbar<CR>
+" imap <F5> <ESC><F5>i
+
 " Diminactive
 Plug 'blueyed/vim-diminactive'
 hi ColorColumn  ctermbg=0 guibg=#eee8d5
@@ -140,6 +149,8 @@ Plug 'rust-lang/rust.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+colorscheme molokai
 
 let g:termdebug_wide = 1
 
