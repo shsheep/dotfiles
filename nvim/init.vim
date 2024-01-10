@@ -79,10 +79,18 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'folke/neodev.nvim'
+Plug 'leoluz/nvim-dap-go'
     PlugFile 'set-nvim-dap.vim'
+    " PlugFile 'set-nvim-dap-go.vim'
 
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown' 
+
+Plug  'Shougo/echodoc.vim'
+" To use echodoc, you must increase 'cmdheight' value.
+let g:echodoc#type = "echo" " Default value
+set cmdheight=2
+let g:echodoc_enable_at_startup = 1
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -121,6 +129,7 @@ set title
 set ut=500
 set relativenumber
 set clipboard=unnamed
+set encoding=utf-8
 
 autocmd FileType c set colorcolumn=80
 autocmd FileType cpp set colorcolumn=80
@@ -128,6 +137,12 @@ autocmd FileType cpp set equalprg=clang-format\ -style=file
 autocmd FileType python set colorcolumn=80
 autocmd FileType vim set colorcolumn=80
 
+" cabbr csf cs find
+" cabbr Csf cs find
+" cabbr CSf cs find
+" cabbr CSF cs find
+" cabbr CS cs
+" cabbr Cs cs
 cabbr Lw w
 cabbr LW w
 cabbr Noh noh
@@ -181,14 +196,14 @@ iabbr pInstnace pInstance
 iabbr subejct subject
 iabbr SUbject Subject
 iabbr SUBject Subject
-iabbr TRue True
-iabbr TUre True
-iabbr Ture True
-iabbr ture true
 iabbr THis This
 iabbr tiem time
 iabbr Tiem Time
 iabbr TIme Time
+iabbr ture true
+iabbr TRue True
+iabbr Ture True
+iabbr TUre True
 
 nmap <F4> :q<CR>
 nmap <silent> <PageUp> :bn<CR>
@@ -208,6 +223,8 @@ vmap SQ S"
 vmap Sq S'
 nmap -G :noh<CR>
 
+inoremap <C-j> <Left>
+inoremap <C-k> <Right>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-l> <Del>

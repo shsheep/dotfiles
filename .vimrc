@@ -1,3 +1,4 @@
+syntax on
 " VIM-PLUG
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
@@ -11,10 +12,13 @@ let g:UltiSnipsSnippetDirectories = ['~/Workspace/dotfiles/snippets']
 
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+nmap <F3> :CocCommand explorer --sources=buffer+,file+ --width=25<CR>
+imap <F3> <ESC><F3>i
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 Plug 'preservim/nerdtree'
 " Open NERDTree whenever starts Vim.
-autocmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree | wincmd p
 " Close Vim if the only window left open is a NERDTree.
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeWinSize=25
@@ -29,7 +33,7 @@ Plug 'preservim/tagbar'
 autocmd VimEnter * Tagbar
 let g:tagbar_sort = 0
 let g:tagbar_width = 22
-let g:tagbar_ctags_bin = 'opt/homebrew/bin/ctags'
+let g:tagbar_ctags_bin = '/opt/homebrew/bin/ctags'
 let g:Tlist_Ctags_Cmd = '/opt/homebrew/bin/ctags'
 nmap <F5> :Tagbar<CR>:Tagbar<CR>
 imap <F5> <ESC><F5>i
@@ -146,6 +150,14 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/linediff.vim'
 Plug 'rust-lang/rust.vim'
 
+Plug 'Shougo/echodoc.vim'
+let g:echodoc#type = "echo" " Default value
+" To use echodoc, you must increase 'cmdheight' value.
+set cmdheight=2
+let g:echodoc_enable_at_startup = 1
+
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -178,6 +190,7 @@ set encoding=utf-8
 
 autocmd FileType c set colorcolumn=80
 autocmd FileType cpp set colorcolumn=80
+autocmd FileType cpp set equalprg=clang-format\ -style=file
 autocmd FileType python set colorcolumn=80
 autocmd FileType vim set colorcolumn=80
 
@@ -218,6 +231,12 @@ cabbr WQ wq
 cabbr vrc ~/.vimrc
 cabbr vvrc vi ~/.vimrc
 
+iabbr <expr> __pwd expand("%:p:h")
+iabbr <expr> __time strftime("%Y-%m-%d %H:%M:%S")
+iabbr <expr> __date strftime("%Y-%m-%d")
+iabbr <expr> __file expand('%:p')
+iabbr <expr> __name expand('%')
+
 " Typical typo
 iabbr calss class
 iabbr Calss Class
@@ -226,7 +245,7 @@ iabbr Clinet client
 iabbr evnet event
 iabbr Evnet Evnet
 iabbr FAlse False
-iabbr flase False
+iabbr flase false
 iabbr FLase False
 iabbr initalize initialize
 iabbr Initalize Initialize
@@ -236,14 +255,14 @@ iabbr pInstnace pInstance
 iabbr subejct subject
 iabbr SUbject Subject
 iabbr SUBject Subject
-iabbr TRue True
-iabbr ture true
-iabbr Ture True
-iabbr TUre True
 iabbr THis This
 iabbr tiem time
 iabbr Tiem Time
 iabbr TIme Time
+iabbr ture true
+iabbr TRue True
+iabbr Ture True
+iabbr TUre True
 " TODO
 iabbr :W <ESC>:w<CR>
 iabbr :w <ESC>:w<CR>
@@ -282,14 +301,15 @@ inoremap <C-l> <Del>
 inoremap <C-d> <Del>
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-iabbr <expr> __pwd expand("%:p:h")
-iabbr <expr> __time strftime("%Y-%m-%d %H:%M:%S")
-iabbr <expr> __date strftime("%Y-%m-%d")
-iabbr <expr> __file expand('%:p')
-iabbr <expr> __name expand('%')
+cnoremap <C-a> <Home>
+cnoremap <C-j> <Left>
+cnoremap <C-k> <Right>
+cnoremap <C-l> <Del>
+cnoremap <C-g> <C-Left>
+cnoremap <C-;> <C-Right>
 
 " vim-go
-let g:go_code_completion_enable = 0
+let g:go_code_completion_enable = 1
 function! s:build_go_files()
     let l:file = expand('%')
     if l:file =~# '^\f\+_test\.go$'
@@ -316,9 +336,15 @@ nnoremap <Leader>dc :call vimspector#Continue()<CR>
 nnoremap <Leader>dt :call vimspector#ToggleBreakpoint()<CR>
 nnoremap <Leader>dT :call vimspector#ClearBreakpoints()<CR>
 nmap <Leader>dk <Plug>VimspectorRestart
-nmap <Leader>dh <Plug>VimspectorStepOut
-nmap <Leader>dl <Plug>VimspectorStepInto
-nmap <Leader>dj <Plug>VimspectorStepOver
+nnoremap <F7> :call vimspector#Launch()<CR>
+nnoremap <F8> :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <F9> <Plug>VimspectorStepOver
+nnoremap <F10> <Plug>VimspectorStepInto
+nnoremap <F11> <Plug>VimspectorStepOut
+
+" fzf-vim
+nnoremap <Leader>ff :Files<CR>
+nnoremap <Leader>fb :Buffers<CR>
 
 " Start Vim at where you lastly worked 
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm g`\"" | endif
@@ -335,7 +361,13 @@ function! SetCommentPrefix()
     if &filetype == "vim"
         " for vim, inline comment start with \"
         let s:comment_prefix = "\" "
-    elseif &filetype ==? "c" || &filetype ==? "h" || &filetype ==? "cpp" || &filetype ==? "hpp"
+    elseif &filetype ==? "c"
+               \ || &filetype ==? "h"
+               \ || &filetype ==? "cpp"
+               \ || &filetype ==? "hpp"
+               \ || &filetype ==? "go"
+               \ || &filetype ==? "rust"
+               \ || &filetype ==? "javascript"
         let s:comment_prefix = "// "
 	elseif &filetype ==? "py"
 		let s:comment_prefix = "# "

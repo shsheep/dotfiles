@@ -39,6 +39,13 @@ snippet fsp "fmt.Sprintf(...)"
 fmt.Sprintf("%${1:s}", ${2:var})
 endsnippet
 
+# error handling
+snippet ien "Basic error handling" b
+if err != nil {
+	$0
+}
+endsnippet
+
 # struct
 snippet st "type T struct { ... }" b
 type ${1:Type} struct {
@@ -68,10 +75,10 @@ const (
 )
 endsnippet
 
-snippet
-	"${1:package}"
-)
-endsnippet
+# snippet
+	# "${1:package}"
+# )
+# endsnippet
 
 snippet /^package/ "Package declaration" r
 // Package $1 provides ...
@@ -164,13 +171,6 @@ snippet json "JSON field"
 endsnippet
 
 # vim:ft=snippets:
-
-# error handling
-snippet err "Basic error handling" b
-if err != nil {
-	log.${1:Fatal}(err)
-}
-endsnippet
 
 # ============ vim-go default snippets ============
 # Snippets for Go
@@ -668,29 +668,29 @@ if !reflect.DeepEqual(${1:expected}, ${2:actual}) {
 }
 endsnippet
 
-global !p
-
-import re
-
-# Automatically wrap return types with parentheses
-
-def return_values(s):
-	# remove everything wrapped in parentheses
-	s = re.sub("\(.*?\)|\([^)]*$", "", s)
-	return len(s.split(","))
-
-def opening_par(snip, pos):
-	if return_values(t[pos]) > 1 and not t[pos].startswith("("):
-		snip.rv = "("
-	else:
-		snip.rv = ""
-
-def closing_par(snip, pos):
-	if return_values(t[pos]) > 1:
-		snip.rv = ")"
-	else:
-		snip.rv = ""
-
-endglobal
+# global !p
+# 
+# import re
+# 
+# # Automatically wrap return types with parentheses
+# 
+# def return_values(s):
+	# # remove everything wrapped in parentheses
+	# s = re.sub("\(.*?\)|\([^)]*$", "", s)
+	# return len(s.split(","))
+# 
+# def opening_par(snip, pos):
+	# if return_values(t[pos]) > 1 and not t[pos].startswith("("):
+		# snip.rv = "("
+	# else:
+		# snip.rv = ""
+# 
+# def closing_par(snip, pos):
+	# if return_values(t[pos]) > 1:
+		# snip.rv = ")"
+	# else:
+		# snip.rv = ""
+# 
+# endglobal
 
 # vim:ft=snippets:

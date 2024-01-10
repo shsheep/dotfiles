@@ -11,9 +11,16 @@ font:
   # italic:
   # family: "MesloLGMDZ Nerd Font Mono"
   # style: Italic
-  size: 15.0
+  size: 14.0
 
 draw_bold_text_with_bright_colors: true
+
+
+cursor:
+  style:
+    shape: Block
+    blinking: Always
+  blink_interval: 400
 
 colors:
   primary:

@@ -1,0 +1,15 @@
+{
+    "name": "Chrome Bookmark Shortcut Upstage",
+    "version": "1.0",
+    "description": "Custom shortcuts for bookmarks!",
+
+    "permissions": ["http://*/*", "tabs"],
+    "content_scripts": [
+      {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["background.js"],
+        "run_at": "document_start"
+      }
+      ],
+    "manifest_version": 2
+  }
