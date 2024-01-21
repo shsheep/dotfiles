@@ -324,6 +324,7 @@ autocmd FileType go nmap ]c :cnext<CR>
 autocmd FileType go nmap [c :cprev<CR>
 autocmd FileType go nmap <C-\>d :GoDoc<CR>
 autocmd FileType go nmap gi :GoInfo<CR>
+autocmd FileType go nmap gn :GoRename<CR>
 autocmd FileType go nmap gr :GoReferrers<CR>
 autocmd FileType go nmap <leader>B :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>R <Plug>(go-run)
@@ -343,8 +344,9 @@ nnoremap <F10> <Plug>VimspectorStepInto
 nnoremap <F11> <Plug>VimspectorStepOut
 
 " fzf-vim
-nnoremap <Leader>ff :Files<CR>
 nnoremap <Leader>fb :Buffers<CR>
+nnoremap <Leader>ff :Files<CR>
+nnoremap <Leader>fr :Rg<CR>
 
 " Start Vim at where you lastly worked 
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "norm g`\"" | endif

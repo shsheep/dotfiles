@@ -173,3 +173,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/opt/homebrew/bin"
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
