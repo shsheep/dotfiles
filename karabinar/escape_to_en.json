@@ -38,7 +38,8 @@
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
-                                "^com\\.apple\\.Notes$"
+                                "^com\\.apple\\.Notes$",
+                                "^com\\.microsoft\\.VSCode$"
                             ]
                         }
                     ]

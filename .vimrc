@@ -35,7 +35,7 @@ let g:tagbar_sort = 0
 let g:tagbar_width = 22
 let g:tagbar_ctags_bin = '/opt/homebrew/bin/ctags'
 let g:Tlist_Ctags_Cmd = '/opt/homebrew/bin/ctags'
-nmap <F5> :Tagbar<CR>:Tagbar<CR>
+nmap <F5> :Tagbar<CR>
 imap <F5> <ESC><F5>i
 
 " Diminactive
@@ -44,11 +44,19 @@ hi ColorColumn  ctermbg=0 guibg=#eee8d5
 let g:diminactive_use_syntax=0
 
 Plug 'tpope/vim-fugitive'
+
 Plug 'tpope/vim-surround'
+
 Plug 'tpope/vim-repeat'
+
 Plug 'airblade/vim-gitgutter'
+
 Plug 'puremourning/vimspector'
+
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+Plug 'mhinz/vim-startify'
+
 Plug 'vimwiki/vimwiki', {'branch': 'dev'}
 "1번 위키(공개용)와 2번 위키(개인용)
 let g:vimwiki_list = [
@@ -158,6 +166,7 @@ let g:echodoc_enable_at_startup = 1
 
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -268,8 +277,8 @@ iabbr :W <ESC>:w<CR>
 iabbr :w <ESC>:w<CR>
 
 nmap <F4> :q<CR>
-nmap <F5> :TlistUpdateOn<CR>
-imap <F5> <ESC><F5>i
+" nmap <F5> :TlistUpdateOn<CR>
+" imap <F5> <ESC><F5>i
 nmap <F6> :UltiSnipsEdit<CR>i
 imap <F6> <ESC><F6>i
 nmap <F9> ko{<ESC>jo}<ESC>
@@ -330,6 +339,14 @@ autocmd FileType go nmap <leader>B :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>R <Plug>(go-run)
 autocmd FileType go set colorcolumn=99
 
+" Settings for Python
+autocmd FileType python nmap gd <Plug>(coc-definition)
+" nmap <Leader>gr <Plug>(coc-references)
+autocmd FileType python nmap gr <Plug>(coc-references-used)
+autocmd FileType python nmap gn <Plug>(coc-rename)
+" <Plug>(coc-references-used)
+" coc-callHierarchy CocAction('showIncomingCalls')
+"
 " vimspector
 nnoremap <Leader>dd :call vimspector#Launch()<CR>
 nnoremap <Leader>de :call vimspector#Reset()<CR>
