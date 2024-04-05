@@ -84,6 +84,14 @@ parse_git_branch() {
     stash_size=$(git stash list | wc -l | sed 's/ //g')
     printf " ($cur_branch)$file_status $stash_size"
 }
+dstrm() {
+    cont_id=$1
+    docker stop $1 && docker rm $1
+}
+sdstrm() {
+    cont_id=$1
+    sudo docker stop $1 && docker rm $1
+}
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -104,6 +112,7 @@ parse_git_branch() {
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
+compdef _gnu_generic delta
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -156,7 +165,10 @@ alias psef="ps -ef"
 alias rml="rm -f *.log"
 alias szr="source ~/.zshrc"
 alias tfl="tail -f *.log"
-alias vi="/opt/homebrew/Cellar/vim/9.0.2100/bin/vim"
+alias vi="/opt/homebrew/Cellar/vim/9.1.0200/bin/vim"
+alias vim="/opt/homebrew/Cellar/vim/9.1.0200/bin/vim"
+alias vio-="/opt/homebrew/Cellar/vim/9.1.0200/bin/vim -o"
+alias viO="/opt/homebrew/Cellar/vim/9.1.0200/bin/vim -O"
 alias vo="vi"
 alias vrc="~/.vimrc"
 alias vu="vi"
@@ -166,7 +178,7 @@ alias vzr="vi ~/.zshrc"
 alias wiki="cd ~/Workspace/shsheepwiki"
 
 export PATH=$PATH:$HOME/.rbenv/bin
-export EDITOR=nvim
+export EDITOR=vim
 # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
@@ -176,3 +188,4 @@ export PATH="$PATH:/opt/homebrew/bin"
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export PATH=$PATH:$HOME/.local/bin

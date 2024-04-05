@@ -337,7 +337,7 @@ autocmd FileType go nmap gn :GoRename<CR>
 autocmd FileType go nmap gr :GoReferrers<CR>
 autocmd FileType go nmap <leader>B :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>R <Plug>(go-run)
-autocmd FileType go set colorcolumn=99
+autocmd FileType go set colorcolumn=80
 
 " Settings for Python
 autocmd FileType python nmap gd <Plug>(coc-definition)
