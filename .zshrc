@@ -68,7 +68,7 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker pip golang rust fzf)
+plugins=(git docker pip golang rust fzf poetry)
 
 source $ZSH/oh-my-zsh.sh
 export HOMEBREW_NO_AUTO_UPDATE=1
@@ -167,7 +167,7 @@ alias szr="source ~/.zshrc"
 alias tfl="tail -f *.log"
 alias vi="/opt/homebrew/Cellar/vim/9.1.0200/bin/vim"
 alias vim="/opt/homebrew/Cellar/vim/9.1.0200/bin/vim"
-alias vio-="/opt/homebrew/Cellar/vim/9.1.0200/bin/vim -o"
+alias vio="/opt/homebrew/Cellar/vim/9.1.0200/bin/vim -o"
 alias viO="/opt/homebrew/Cellar/vim/9.1.0200/bin/vim -O"
 alias vo="vi"
 alias vrc="~/.vimrc"
@@ -178,6 +178,7 @@ alias vzr="vi ~/.zshrc"
 alias wiki="cd ~/Workspace/shsheepwiki"
 
 export PATH=$PATH:$HOME/.rbenv/bin
+export PATH=$PATH:$HOME/Library/Python/3.9/bin
 export EDITOR=vim
 # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

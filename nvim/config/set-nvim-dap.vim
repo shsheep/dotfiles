@@ -20,6 +20,16 @@ lua local dap, dapui = require('dap'), require('dapui');
             \         args = {},
             \     },
             \ };
+            \ dap.configurations.rust = dap.configurations.cpp;
+            \ dap.configurations.c = dap.configurations.cpp;
+            \ dap.adapters.delve = {
+            \   type = 'server',
+            \   port = '${port}',
+            \   executable = {
+            \     command = 'dlv',
+            \     args = {'dap', '-l', '127.0.0.1:${port}'},
+            \   }
+            \ };
             \ dap.adapters.go = {
             \       type = 'executable',
             \       command = 'node',
@@ -27,18 +37,38 @@ lua local dap, dapui = require('dap'), require('dapui');
             \ };
             \ dap.configurations.go = {
             \   {
-            \       type = 'go',
-            \       name = 'Debug',
-            \       request = 'launch',
-            \       showLog = false,
-            \       program = "${file}",
-            \       args = {},
-            \       dlvToolPath = '/Users/shsheep/go/bin/dlv',
+            \     type = "delve",
+            \     name = "Debug",
+            \     request = "launch",
+            \     program = "${file}"
             \   },
+            \   {
+            \     type = "delve",
+            \     name = "Debug test",
+            \     request = "launch",
+            \     mode = "test",
+            \     program = "${file}"
+            \   },
+            \   {
+            \     type = "delve",
+            \     name = "Debug test (go.mod)",
+            \     request = "launch",
+            \     mode = "test",
+            \     program = "./${relativeFileDirname}"
+            \   } 
             \ };
-            \ dap.configurations.rust = dap.configurations.cpp;
-            \ dap.configurations.c = dap.configurations.cpp;
             \ dap.set_log_level('TRACE');
+            " \ dap.configurations.go = {
+            " \   {
+            " \       type = 'go',
+            " \       name = 'Debug',
+            " \       request = 'launch',
+            " \       showLog = false,
+            " \       program = "${file}",
+            " \       args = {},
+            " \       dlvToolPath = '/Users/shsheep/go/bin/dlv',
+            " \   },
+            " \ };
             " \ dap.listeners.after.event_initialized["dapui_config"] = function()
             " \   dapui.open()
             " \ end;

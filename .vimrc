@@ -10,7 +10,6 @@ let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories = ['~/Workspace/dotfiles/snippets']
 
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 nmap <F3> :CocCommand explorer --sources=buffer+,file+ --width=25<CR>
 imap <F3> <ESC><F3>i
@@ -40,7 +39,7 @@ imap <F5> <ESC><F5>i
 
 " Diminactive
 Plug 'blueyed/vim-diminactive'
-hi ColorColumn  ctermbg=0 guibg=#eee8d5
+hi ColorColumn ctermbg=0 guibg=#eee8d5
 let g:diminactive_use_syntax=0
 
 Plug 'tpope/vim-fugitive'
@@ -156,16 +155,25 @@ Plug 'fatih/molokai'
 Plug 'morhetz/gruvbox'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'AndrewRadev/linediff.vim'
-Plug 'rust-lang/rust.vim'
 
 Plug 'Shougo/echodoc.vim'
-let g:echodoc#type = "echo" " Default value
+" let g:echodoc#type = 'echo' " Default value
 " To use echodoc, you must increase 'cmdheight' value.
 set cmdheight=2
 let g:echodoc_enable_at_startup = 1
 
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+
+Plug 'davidhalter/jedi-vim'
+let g:jedi#use_splits_not_buffers = 'top'
+" let g:jedi#auto_initialization = 1
+" let g:jedi#completions_enabled = 0
+" let g:jedi#auto_vim_configuration = 0
+" let g:jedi#smart_auto_mappings = 0
+" let g:jedi#popup_on_dot = 0
+" let g:jedi#completions_command = ""
+" let g:jedi#show_call_signatures = "1"
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -279,7 +287,7 @@ iabbr :w <ESC>:w<CR>
 nmap <F4> :q<CR>
 " nmap <F5> :TlistUpdateOn<CR>
 " imap <F5> <ESC><F5>i
-nmap <F6> :UltiSnipsEdit<CR>i
+nmap <F6> :UltiSnipsEdit<CR>
 imap <F6> <ESC><F6>i
 nmap <F9> ko{<ESC>jo}<ESC>
 imap <F9> <ESC><F9>i
@@ -340,13 +348,13 @@ autocmd FileType go nmap <leader>R <Plug>(go-run)
 autocmd FileType go set colorcolumn=80
 
 " Settings for Python
-autocmd FileType python nmap gd <Plug>(coc-definition)
+" autocmd FileType python nmap gd <Plug>(coc-definition)
 " nmap <Leader>gr <Plug>(coc-references)
-autocmd FileType python nmap gr <Plug>(coc-references-used)
-autocmd FileType python nmap gn <Plug>(coc-rename)
+" autocmd FileType python nmap gr <Plug>(coc-references-used)
+" autocmd FileType python nmap gn <Plug>(coc-rename)
 " <Plug>(coc-references-used)
 " coc-callHierarchy CocAction('showIncomingCalls')
-"
+
 " vimspector
 nnoremap <Leader>dd :call vimspector#Launch()<CR>
 nnoremap <Leader>de :call vimspector#Reset()<CR>

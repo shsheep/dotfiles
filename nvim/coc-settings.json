@@ -20,5 +20,6 @@
             "filetypes": ["go"],
             "rootPatterns": ["go.mod"]
         }
-    }
+    },
+    "snippets.ultisnips.pythonPrompt": false
 }

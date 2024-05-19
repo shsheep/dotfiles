@@ -48,9 +48,18 @@ parse_git_branch() {
     stash_size=$(git stash list | wc -l | sed 's/ //g')
     printf " ($cur_branch)$file_status $stash_size"
 }
+
 # Should use single quote
 export PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[1;31m\]$(parse_git_branch)\n\[\033[32m\]\$\[\033[m\] '
 
+dstrm() {
+    cont_id=$1
+    docker stop $1 && docker rm $1
+}
+sdstrm() {
+    cont_id=$1
+    sudo docker stop $1 && sudo docker rm $1
+}
 stty -ixon
 
 # User specific environment and startup programs

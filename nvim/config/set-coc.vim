@@ -6,6 +6,13 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " inoremap <expr> <CR> coc#pum#visible() ? coc#_select_confirm() : \<CR>"
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm()
             \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : <SID>check_back_space() ? "\<TAB>" : coc#refresh()
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
 " inoremap <silent><expr> <CR> coc#pum#visible() ? coc#_select_confirm() : ""\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 " inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 

@@ -44,6 +44,8 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'tpope/vim-surround'
 
+Plug 'tpope/vim-repeat'
+
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     PlugFile 'set-vimgo.vim'
 
@@ -54,8 +56,6 @@ Plug 'vimwiki/vimwiki', {'branch': 'dev'}
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-
-Plug 'tpope/vim-repeat'
 
 Plug 'AndrewRadev/splitjoin.vim'
 

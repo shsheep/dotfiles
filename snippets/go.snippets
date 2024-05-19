@@ -3,8 +3,12 @@
 priority -50
 
 # Fmt Printf debug
+# snippet fpf "fmt.Printf(...)"
+# fmt.Printf("$1 = %+v\n", ${1:${VISUAL}})
+# endsnippet
+# fmt.Printf("${1:${VISUAL}}", $2)
 snippet fpf "fmt.Printf(...)"
-fmt.Printf("$1 = %+v\n", ${1:${VISUAL}})
+fmt.Printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\);)/}
 endsnippet
 
 # Fmt Printf debug with hash
@@ -110,8 +114,9 @@ type ${1:Interface} interface {
 }
 endsnippet
 
-snippet if "If statement" b
-if ${1:condition}${1/(.+)/ /}{
+# if condition
+snippet if "if ... { ... }"
+if ${1:condition} {
 	${0:${VISUAL}}
 }
 endsnippet
@@ -166,9 +171,9 @@ var (
 )
 endsnippet
 
-snippet json "JSON field"
-\`json:"${1:displayName}"\`
-endsnippet
+# snippet json "JSON field"
+# \`json:"${1:displayName}"\`
+# endsnippet
 
 # vim:ft=snippets:
 
@@ -301,13 +306,6 @@ endsnippet
 snippet interface "interface I { ... }"
 type ${1:Interface} interface {
 	${2:/* TODO: add methods */}
-}
-endsnippet
-
-# if condition
-snippet if "if ... { ... }"
-if ${1:condition} {
-	${0:${VISUAL}}
 }
 endsnippet
 
