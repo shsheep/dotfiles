@@ -4,7 +4,7 @@ if (window == top) {
 
 var bookmarks = {}, url;
 
-bookmarks['A'] = 'https://aqicn.org/city/korea/seoul/gangseo-gu/kr/';
+bookmarks['A'] = 'https://aqicn.org/city/korea/gyeonggi/suwon-si/uman-dong';
 bookmarks['B'] = 'https://github.com/uber-go/guide/blob/master/style.md';
 bookmarks['C'] = 'https://calendar.google.com/calendar';
 bookmarks['D'] = 'https://drive.google.com/drive/folders/0AMOEfcF1r0giUk9PVA';
@@ -13,11 +13,11 @@ bookmarks['F'] = 'https://flex.team';
 bookmarks['G'] = 'https://mail.google.com/mail';
 // bookmarks['G'] = 'https://go.dev/talks/2013/bestpractices.slide#1'
 bookmarks['H'] = 'https://chat.openai.com/';
-// bookmarks['I'] = 'https://';
+bookmarks['I'] = 'https://chat.instage.ai/ko';
 // bookmarks['J'] = 'https://github.com/shsheep/Journey_to_summit/tree/master/Leetcode';
-// bookmarks['K'] = 'https://play.kotlinlang.org/';
+bookmarks['K'] = 'https://map.kakao.com/';
 bookmarks['L'] = 'https://linear.app/upstage/team/OCRPK/all';
-bookmarks['M'] = 'https://map.kakao.com/';
+bookmarks['M'] = 'https://map.naver.com/';
 bookmarks['N'] = 'https://www.naver.com/';
 // bookmarks['O'] = 'https://';
 // bookmarks['P'] = 'https://';

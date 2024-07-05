@@ -175,6 +175,9 @@ let g:jedi#use_splits_not_buffers = 'top'
 " let g:jedi#completions_command = ""
 " let g:jedi#show_call_signatures = "1"
 
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
