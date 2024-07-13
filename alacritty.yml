@@ -137,6 +137,10 @@ key_bindings:
   # tmux 윈도우 목록 보기(선택)
   # command + e                      C-q w
   - { key: E, mods: Command, chars: "\x11w" }
+  - { key: Z, mods: Command, chars: "\x11z" }
+  - { key: A, mods: Command, chars: "\x11a" }
+  - { key: B, mods: Command, chars: "\x11b" }
+  # - { key: A, mods: Command, chars: "\x11:set synchronize-panes on\x0D" }
 
   # tmux 윈도우 사이즈 조정
   # cmd + 화살표,                        C-q H, C-q J, C-q K, C-q L
@@ -151,3 +155,4 @@ key_bindings:
 
   # command + [                             C-q [
   - { key: LBracket, mods: Command, chars: "\x11[" } # tmux 스크롤/복사 모드 전환
+  - { key: RBracket, mods: Command, chars: "\x11]" } # tmux 클립보드 붙여넣기
