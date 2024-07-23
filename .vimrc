@@ -166,7 +166,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 Plug 'davidhalter/jedi-vim'
-let g:jedi#use_splits_not_buffers = 'top'
+let g:jedi#use_splits_not_buffers = 'left'
 " let g:jedi#auto_initialization = 1
 " let g:jedi#completions_enabled = 0
 " let g:jedi#auto_vim_configuration = 0

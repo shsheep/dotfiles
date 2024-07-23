@@ -177,6 +177,7 @@ alias vvrc="vi ~/.vimrc"
 alias vzr="vi ~/.zshrc"
 alias wiki="cd ~/Workspace/shsheepwiki"
 
+export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/.rbenv/bin
 export PATH=$PATH:$HOME/Library/Python/3.9/bin
 export EDITOR=vim
