@@ -28,7 +28,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -57,7 +58,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -86,7 +88,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -115,7 +118,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -153,7 +157,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -186,7 +191,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -219,7 +225,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -252,7 +259,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -290,7 +298,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -323,7 +332,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -356,7 +366,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -389,7 +400,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -431,7 +443,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -468,7 +481,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -505,7 +519,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -542,7 +557,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -580,7 +596,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -613,7 +630,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -646,7 +664,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -679,7 +698,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -721,7 +741,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -758,7 +779,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -795,7 +817,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -832,7 +855,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -874,7 +898,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -911,7 +936,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -948,7 +974,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -985,7 +1012,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1021,7 +1049,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1052,7 +1081,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1083,7 +1113,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1114,7 +1145,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1154,7 +1186,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1190,7 +1223,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1226,7 +1260,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1262,7 +1297,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1302,7 +1338,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1337,7 +1374,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1372,7 +1410,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1407,7 +1446,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1449,7 +1489,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1486,7 +1527,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1523,7 +1565,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1560,7 +1603,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1600,7 +1644,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1635,7 +1680,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1670,7 +1716,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
@@ -1705,7 +1752,8 @@
                                 "^com\\.jetbrains\\.intellij\\.ce$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
-                                "^com\\.microsoft\\.VSCode$"
+                                "^com\\.microsoft\\.VSCode$",
+                                "^notion\\.id$"
                             ]
                         }
                     ]
