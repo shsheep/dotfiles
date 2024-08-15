@@ -50,7 +50,8 @@ parse_git_branch() {
 }
 
 # Should use single quote
-export PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[1;31m\]$(parse_git_branch)\n\[\033[32m\]\$\[\033[m\] '
+# export PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[1;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[1;31m\]$(parse_git_branch)\n\[\033[1;32m\]\$\[\033[m\] '
+export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}$C_LIGHTGREEN\u@\h$C_DEFAULT:$C_LIGHTBLUE\w$C_DEFAULT$C_LIGHTRED"'$(parse_git_branch)'"\n$C_LIGHTGREEN\$$C_DEFAULT "
 
 dstrm() {
     cont_id=$1
