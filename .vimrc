@@ -68,11 +68,6 @@ let g:vimwiki_list = [
 \   'path': '~/Workspace/shsheepwiki/_wiki',
 \   'ext' : '.md',
 \   'diary_rel_path': '.',
-\},
-\{
-\   'path': '~/shsheep/Diary/wiki',
-\   'ext' : '.md',
-\   'diary_rel_path': '.',
 \}
 \]
 
@@ -107,6 +102,7 @@ function! NewTemplate()
     let l:wiki_directory = v:false
 
     for wiki in g:vimwiki_list
+        echom wiki.path
         if expand('%:p:h') =~ expand(wiki.path)
             let l:wiki_directory = v:true
             break
@@ -300,12 +296,14 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 nmap ciq ci'
 nmap ciQ ci"
+nmap diq di'
+nmap diQ di"
+nmap viq vi'
+nmap viQ vi"
 nmap csq cs'
 nmap csQ cs"
 nmap dsq ds'
 nmap dsQ ds"
-nmap viq vi'
-nmap viQ vi"
 nmap ysiwq ysiw'
 nmap ysiwQ ysiw"
 nmap ysiWQ ysiW"
@@ -325,8 +323,6 @@ cnoremap <C-a> <Home>
 cnoremap <C-j> <Left>
 cnoremap <C-k> <Right>
 cnoremap <C-l> <Del>
-cnoremap <C-g> <C-Left>
-cnoremap <C-;> <C-Right>
 
 " vim-go
 let g:go_code_completion_enable = 1
@@ -350,21 +346,13 @@ autocmd FileType go nmap <leader>B :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>R <Plug>(go-run)
 autocmd FileType go set colorcolumn=80
 
-" Settings for Python
-" autocmd FileType python nmap gd <Plug>(coc-definition)
-" nmap <Leader>gr <Plug>(coc-references)
-" autocmd FileType python nmap gr <Plug>(coc-references-used)
-" autocmd FileType python nmap gn <Plug>(coc-rename)
-" <Plug>(coc-references-used)
-" coc-callHierarchy CocAction('showIncomingCalls')
-
 " vimspector
 nnoremap <Leader>dd :call vimspector#Launch()<CR>
 nnoremap <Leader>de :call vimspector#Reset()<CR>
 nnoremap <Leader>dc :call vimspector#Continue()<CR>
 nnoremap <Leader>dt :call vimspector#ToggleBreakpoint()<CR>
 nnoremap <Leader>dT :call vimspector#ClearBreakpoints()<CR>
-nmap <Leader>dk <Plug>VimspectorRestart
+nnoremap <Leader>dk <Plug>VimspectorRestart
 nnoremap <F7> :call vimspector#Launch()<CR>
 nnoremap <F8> :call vimspector#ToggleBreakpoint()<CR>
 nnoremap <F9> <Plug>VimspectorStepOver
@@ -388,9 +376,11 @@ au BufRead *.pc set filetype=c
 " FUNCTIONS: set comment's prefix character based on filetype
 function! SetCommentPrefix()
     let s:comment_prefix = "# "
+    let s:comment_prefix_no_space = "#"
     if &filetype == "vim"
         " for vim, inline comment start with \"
         let s:comment_prefix = "\" "
+        let s:comment_prefix_no_space = "\""
     elseif &filetype ==? "c"
                \ || &filetype ==? "h"
                \ || &filetype ==? "cpp"
@@ -399,8 +389,10 @@ function! SetCommentPrefix()
                \ || &filetype ==? "rust"
                \ || &filetype ==? "javascript"
         let s:comment_prefix = "// "
+        let s:comment_prefix_no_space = "//"
 	elseif &filetype ==? "py"
 		let s:comment_prefix = "# "
+        let s:comment_prefix_no_space = "#"
     endif
 endfunction
 
@@ -418,7 +410,7 @@ function! CommentLine(line_number)
 endfunction
 
 "FUNCTION: Uncomment given line
-function! UncommentLine(line_number)
+function! UncommentLine(line_number, op)
     call SetCommentPrefix()
     " remember current cursor position
     let cpos = getpos(".")
@@ -426,7 +418,11 @@ function! UncommentLine(line_number)
     call setpos(".", [0, a:line_number, 0, 0])
     " remove comment prefix charactor
     " !!! use escape() for some languages's prefix eg. C=> "//"
-    exec ".s/".escape(s:comment_prefix, s:comment_prefix[0])."//"
+    if a:op == 1
+        exec ".s/".escape(s:comment_prefix, s:comment_prefix[0])."//"
+    else
+        exec ".s/".escape(s:comment_prefix_no_space, s:comment_prefix_no_space[0])."//"
+    endif
     " restore cursor position
     call setpos(".", cpos)
 endfunction
@@ -440,12 +436,15 @@ function! CheckIsComment(line_number)
     let c = 0
     while c < strlen(sl)
         let d = c + strlen(s:comment_prefix) - 1
+        let e = c + strlen(s:comment_prefix_no_space) - 1
         " sl[c] is space or tabe?
         if  " \t" =~ sl[c]
             " ignore indentation
             " pass
         elseif sl[(c):(d)] == s:comment_prefix
             return 1
+        elseif sl[(c):(e)] == s:comment_prefix_no_space
+            return 2
         else
             return 0
         endif
@@ -458,8 +457,9 @@ endfunction
 function! ToggleCommentLine()
     call SetCommentPrefix()
     let cl = line(".")
-    if CheckIsComment(cl)
-        call UncommentLine(cl)
+    let rc = CheckIsComment(cl)
+    if rc
+        call UncommentLine(cl, rc)
     else
         call CommentLine(cl)
     endif
@@ -476,7 +476,7 @@ function! ToggleCommentRange()
     let i = line_begin
     while i < line_end + 1
         if mode_
-            call UncommentLine(i)
+            call UncommentLine(i, 1)
         else
             call CommentLine(i)
         endif
