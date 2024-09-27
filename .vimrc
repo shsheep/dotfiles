@@ -102,7 +102,6 @@ function! NewTemplate()
     let l:wiki_directory = v:false
 
     for wiki in g:vimwiki_list
-        echom wiki.path
         if expand('%:p:h') =~ expand(wiki.path)
             let l:wiki_directory = v:true
             break
@@ -174,6 +173,7 @@ let g:jedi#use_splits_not_buffers = 'left'
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 
+Plug 'editorconfig/editorconfig-vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 

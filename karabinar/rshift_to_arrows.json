@@ -25,11 +25,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -55,11 +56,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -85,11 +87,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -115,11 +118,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -154,11 +158,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -188,11 +193,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -222,11 +228,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -256,11 +263,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -295,11 +303,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -329,11 +338,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -363,11 +373,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -397,11 +408,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -440,11 +452,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -478,11 +491,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -516,11 +530,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -554,11 +569,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -593,11 +609,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -627,11 +644,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -661,11 +679,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -695,11 +714,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -738,11 +758,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -776,11 +797,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -814,11 +836,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -852,11 +875,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -895,11 +919,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -933,11 +958,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -971,11 +997,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1009,11 +1036,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1046,11 +1074,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1078,11 +1107,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1110,11 +1140,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1142,11 +1173,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1183,11 +1215,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1220,11 +1253,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1257,11 +1291,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1294,11 +1329,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1335,11 +1371,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1371,11 +1408,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1407,11 +1445,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1443,11 +1482,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1486,11 +1526,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1524,11 +1565,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1562,11 +1604,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1600,11 +1643,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1641,11 +1685,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1677,11 +1722,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1713,11 +1759,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]
@@ -1749,11 +1796,12 @@
                                 "^org\\.alacritty$",
                                 "^com\\.google\\.Chrome$",
                                 "^com\\.kakao\\.KakaoTalkMac$",
-                                "^com\\.jetbrains\\.intellij\\.ce$",
+                                "^com\\.jetbrains\\.intellij$",
                                 "^com\\.tinyspeck\\.slackmacgap$",
                                 "^com\\.apple\\.Notes$",
                                 "^com\\.microsoft\\.VSCode$",
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.todesktop\\.230313mzl4w4u92$"
                             ]
                         }
                     ]

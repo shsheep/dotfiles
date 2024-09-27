@@ -3,7 +3,7 @@
     "version": "1.0",
     "description": "Custom shortcuts for bookmarks!",
 
-    "permissions": ["http://*/*", "tabs"],
+    "permissions": ["tabs"],
     "content_scripts": [
       {
         "matches": ["http://*/*", "https://*/*"],
@@ -11,5 +11,5 @@
         "run_at": "document_start"
       }
       ],
-    "manifest_version": 2
+    "manifest_version": 3
   }
