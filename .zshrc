@@ -180,6 +180,9 @@ alias wiki="cd ~/Workspace/shsheepwiki"
 export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/.rbenv/bin
 export PATH=$PATH:$HOME/Library/Python/3.9/bin
+export PATH=$PATH:/opt/homebrew/opt/libpq/bin
+export PATH=$PATH:/Applications/Cursor.app/Contents/Resources/app/bin
+
 export EDITOR=vim
 # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -191,3 +194,16 @@ export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH=$PATH:$HOME/.local/bin
+
+export UPSTAGE_HOME=$HOME/Upstage
+
+export CUSTOMER_HOME=$UPSTAGE_HOME/docai-enterprise-customer-support
+export DATA_HOME=$UPSTAGE_HOME/data
+export DIST_HOME=$UPSTAGE_HOME/enterprise-dist
+export DOCAI_HOME=$UPSTAGE_HOME/docai-enterprise
+export DOCUMENT_HOME=$UPSTAGE_HOME/Documents
+export MODEL_HOME=$UPSTAGE_HOME/models
+export ISSUE_HOME=$UPSTAGE_HOME/issue
+export SHL_HOME=$UPSTAGE_HOME/shl
+export STANDARD_HOME=$UPSTAGE_HOME/devops-delivery-standard
+export SOLAR_HOME=$UPSTAGE_HOME/solar-system-fe

@@ -178,9 +178,9 @@ Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 colorscheme molokai
-
+ 
 let g:termdebug_wide = 1
-
+ 
 set nocompatible
 set backspace=indent,eol,start
 set path+=**
@@ -197,7 +197,7 @@ set hlsearch
 set number
 set ruler
 set mouse=a
-set syntax=on
+" set syntax=on
 set title
 set ut=500
 set relativenumber
@@ -390,8 +390,8 @@ function! SetCommentPrefix()
                \ || &filetype ==? "javascript"
         let s:comment_prefix = "// "
         let s:comment_prefix_no_space = "//"
-	elseif &filetype ==? "py"
-		let s:comment_prefix = "# "
+    elseif &filetype ==? "py"
+        let s:comment_prefix = "# "
         let s:comment_prefix_no_space = "#"
     endif
 endfunction
@@ -405,7 +405,7 @@ function! CommentLine(line_number)
     call setpos(".", [0, a:line_number, 0, 0])
     " just insert comment prefix character at the front of given line
     exec "normal! I".s:comment_prefix
-     "restore cursor position
+    " restore cursor position
     call setpos(".", cpos)
 endfunction
 
@@ -414,7 +414,7 @@ function! UncommentLine(line_number, op)
     call SetCommentPrefix()
     " remember current cursor position
     let cpos = getpos(".")
-    "move to selected line
+    " move to selected line
     call setpos(".", [0, a:line_number, 0, 0])
     " remove comment prefix charactor
     " !!! use escape() for some languages's prefix eg. C=> "//"
@@ -493,39 +493,39 @@ vnoremap <C-_> <ESC> :call ToggleCommentRange()<cr>
 " Long journey of binding shortcut for comment ENDs
 
 if has("cscope")
-	set cscopetag
-	set csto=0
-	if filereadable("cscope.out")
-		cs add cscope.out
-	elseif $CSCOPE_DB != ""
-		cs add $CSCOPE_DB
-	endif
-	set cscopeverbose
+    set cscopetag
+    set csto=0
+    if filereadable("cscope.out")
+    " cs add cscope.out
+    elseif $CSCOPE_DB != ""
+        " cs add $CSCOPE_DB
+    endif
+    set cscopeverbose
 
-	nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-	nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-	nmap <C-\>d :cs find d ^<C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-\>d :cs find d ^<C-R>=expand("<cword>")<CR><CR>
 
-	nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-	nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-	nmap <C-@>d :cs find d ^<C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-@>d :cs find d ^<C-R>=expand("<cword>")<CR><CR>
 
-	nmap <C-@><C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-@><C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-@><C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-@><C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-@><C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
-	nmap <C-@><C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
-	nmap <C-@><C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-	nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@><C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-@><C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 endif
