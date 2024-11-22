@@ -175,7 +175,10 @@ Plug 'kristijanhusak/vim-dadbod-ui'
 
 Plug 'editorconfig/editorconfig-vim'
 " List ends here. Plugins become visible to Vim after this call.
+
+Plug 'vim-autoformat/vim-autoformat'
 call plug#end()
+let g:formatterpath = ['/Users/shsheep/Library/Python/3.9/bin/black']
 
 colorscheme molokai
  
@@ -197,7 +200,7 @@ set hlsearch
 set number
 set ruler
 set mouse=a
-" set syntax=on
+set syntax=on
 set title
 set ut=500
 set relativenumber
@@ -339,12 +342,23 @@ endfunction
 autocmd FileType go nmap ]c :cnext<CR>
 autocmd FileType go nmap [c :cprev<CR>
 autocmd FileType go nmap <C-\>d :GoDoc<CR>
-autocmd FileType go nmap gi :GoInfo<CR>
+autocmd FileType go nmap gf :GoInfo<CR>
+autocmd FileType go nmap gi :GoImplements<CR>
 autocmd FileType go nmap gn :GoRename<CR>
 autocmd FileType go nmap gr :GoReferrers<CR>
 autocmd FileType go nmap <leader>B :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>R <Plug>(go-run)
 autocmd FileType go set colorcolumn=80
+
+autocmd FileType typescript nmap gd :call CocAction('jumpDefinition')<CR>
+autocmd FileType typescript nmap gD :call CocAction('jumpImplementation')<CR>
+autocmd FileType typescript nmap gr :call CocAction('jumpReferences')<CR>
+autocmd FileType typescript nmap gi :call CocAction('getHover')<CR>
+autocmd FileType typescriptreact nmap gd :call CocAction('jumpDefinition')<CR>
+autocmd FileType typescriptreact nmap gD :call CocAction('jumpImplementation')<CR>
+autocmd FileType typescriptreact nmap gr :call CocAction('jumpReferences')<CR>
+autocmd FileType typescriptreact nmap gi :call CocAction('getHover')<CR>
+autocmd FileType javascript nmap gd :call CocAction('jumpDefiniiton')<CR>
 
 " vimspector
 nnoremap <Leader>dd :call vimspector#Launch()<CR>

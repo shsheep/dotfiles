@@ -7,12 +7,16 @@ priority -50
 # fmt.Printf("$1 = %+v\n", ${1:${VISUAL}})
 # endsnippet
 # fmt.Printf("${1:${VISUAL}}", $2)
+snippet fFpf "fmt.Printf(...)"
+fmt.Fprintf(${1:f}, "${2:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\))/}$3${2/([^%]|%%)*(%.)?.*/(?2:\))/}
+endsnippet
+
 snippet fpf "fmt.Printf(...)"
-fmt.Printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\))/}
+fmt.Printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\))/}$2${1/([^%]|%%)*(%.)?.*/(?2:\))/}
 endsnippet
 
 snippet lpf "fmt.Printf(...)"
-log.Printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2:\))/}
+log.Printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\))/}$2${1/([^%]|%%)*(%.)?.*/(?2:\))/}
 endsnippet
 
 # Fmt Printf debug with hash
@@ -47,7 +51,7 @@ if ${1:${VISUAL:err}} != nil {
 endsnippet
 
 # sprintf
-snippet fsp "fmt.Sprintf(...)"
+snippet fspf "fmt.Sprintf(...)" w
 fmt.Sprintf("%${1:s}", ${2:var})
 endsnippet
 
