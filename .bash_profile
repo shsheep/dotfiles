@@ -54,12 +54,14 @@ parse_git_branch() {
 export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}$C_LIGHTGREEN\u@\h$C_DEFAULT:$C_LIGHTBLUE\w$C_DEFAULT$C_LIGHTRED"'$(parse_git_branch)'"\n$C_LIGHTGREEN\$$C_DEFAULT "
 
 dstrm() {
-    cont_id=$1
-    docker stop $1 && docker rm $1
+    for cont_id in "$@"; do
+        docker stop $cont_id && docker rm $cont_id
+    done
 }
 sdstrm() {
-    cont_id=$1
-    sudo docker stop $1 && sudo docker rm $1
+    for cont_id in "$@"; do
+        sudo docker stop $cont_id && sudo docker rm $cont_id
+    done
 }
 stty -ixon
 

@@ -19,6 +19,9 @@
             "command": "~/go/bin/gopls",
             "filetypes": ["go"],
             "rootPatterns": ["go.mod"]
+        },
+        "go.goplsOptions": {
+            "usePlaceholders": true
         }
     },
     "snippets.ultisnips.pythonPrompt": false

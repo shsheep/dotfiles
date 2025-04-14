@@ -85,12 +85,14 @@ parse_git_branch() {
     printf " ($cur_branch)$file_status $stash_size"
 }
 dstrm() {
-    cont_id=$1
-    docker stop $1 && docker rm $1
+    for cont_id in "$@"; do
+        docker stop $cont_id && docker rm $cont_id
+    done
 }
 sdstrm() {
-    cont_id=$1
-    sudo docker stop $1 && docker rm $1
+    for cont_id in "$@"; do
+        sudo docker stop $cont_id && sudo docker rm $cont_id
+    done
 }
 # User configuration
 
@@ -191,7 +193,8 @@ export EDITOR=vim
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/opt/homebrew/bin"
-export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
+# export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
+export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH=$PATH:$HOME/.local/bin
@@ -208,3 +211,4 @@ export ISSUE_HOME=$UPSTAGE_HOME/issue
 export SHL_HOME=$UPSTAGE_HOME/shl
 export STANDARD_HOME=$UPSTAGE_HOME/devops-delivery-standard
 export SOLAR_HOME=$UPSTAGE_HOME/solar-system-fe
+export WORKFLOW_HOME=$UPSTAGE_HOME/docai-inference-workflow

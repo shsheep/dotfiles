@@ -10,7 +10,7 @@ let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsSnippetDirectories = ['~/Workspace/dotfiles/snippets']
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim' " , {'branch': 'release'}
 nmap <F3> :CocCommand explorer --sources=buffer+,file+ --width=25<CR>
 imap <F3> <ESC><F3>i
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
@@ -172,6 +172,10 @@ let g:jedi#use_splits_not_buffers = 'left'
 
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
+let g:db_ui_icons = {
+    \ 'expanded': '▼',
+    \ 'collapsed': '▶',
+    \ }
 
 Plug 'editorconfig/editorconfig-vim'
 " List ends here. Plugins become visible to Vim after this call.
@@ -212,6 +216,7 @@ autocmd FileType cpp set colorcolumn=80
 autocmd FileType cpp set equalprg=clang-format\ -style=file
 autocmd FileType python set colorcolumn=80
 autocmd FileType vim set colorcolumn=80
+autocmd FileType yaml setlocal tabstop=2 shiftwidth=2
 
 cabbr csf cs find
 cabbr Csf cs find
@@ -282,6 +287,8 @@ iabbr ture true
 iabbr TRue True
 iabbr Ture True
 iabbr TUre True
+iabbr wieght weight
+iabbr Wieght Weight
 " TODO
 iabbr :W <ESC>:w<CR>
 iabbr :w <ESC>:w<CR>
@@ -313,6 +320,11 @@ nmap ysiWQ ysiW"
 vmap SQ S"
 vmap Sq S'
 nmap -G :noh<CR>
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 inoremap <C-j> <Left>
 inoremap <C-k> <Right>
@@ -350,15 +362,18 @@ autocmd FileType go nmap <leader>B :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>R <Plug>(go-run)
 autocmd FileType go set colorcolumn=80
 
-autocmd FileType typescript nmap gd :call CocAction('jumpDefinition')<CR>
-autocmd FileType typescript nmap gD :call CocAction('jumpImplementation')<CR>
-autocmd FileType typescript nmap gr :call CocAction('jumpReferences')<CR>
-autocmd FileType typescript nmap gi :call CocAction('getHover')<CR>
+autocmd FileType typescript      nmap gd :call CocAction('jumpDefinition')<CR>
+autocmd FileType typescript      nmap gD :call CocAction('jumpImplementation')<CR>
+autocmd FileType typescript      nmap gr :call CocAction('jumpReferences')<CR>
+autocmd FileType typescript      nmap gi :call CocAction('getHover')<CR>
 autocmd FileType typescriptreact nmap gd :call CocAction('jumpDefinition')<CR>
 autocmd FileType typescriptreact nmap gD :call CocAction('jumpImplementation')<CR>
 autocmd FileType typescriptreact nmap gr :call CocAction('jumpReferences')<CR>
 autocmd FileType typescriptreact nmap gi :call CocAction('getHover')<CR>
-autocmd FileType javascript nmap gd :call CocAction('jumpDefiniiton')<CR>
+autocmd FileType javascript      nmap gd :call CocAction('jumpDefinition')<CR>
+autocmd FileType javascript      nmap gD :call CocAction('jumpImplementation')<CR>
+autocmd FileType javascript      nmap gr :call CocAction('jumpReferences')<CR>
+autocmd FileType javascript      nmap gi :call CocAction('getHover')<CR>
 
 " vimspector
 nnoremap <Leader>dd :call vimspector#Launch()<CR>
@@ -510,9 +525,9 @@ if has("cscope")
     set cscopetag
     set csto=0
     if filereadable("cscope.out")
-    " cs add cscope.out
+        cs add cscope.out
     elseif $CSCOPE_DB != ""
-        " cs add $CSCOPE_DB
+        cs add $CSCOPE_DB
     endif
     set cscopeverbose
 
@@ -527,6 +542,7 @@ if has("cscope")
 
     nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>
     nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-2>g :cs find g <C-R>=expand("<cword>")<CR><CR>
     nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>
     nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>
     nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>
