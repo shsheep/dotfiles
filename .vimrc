@@ -176,6 +176,7 @@ let g:db_ui_icons = {
     \ 'expanded': '▼',
     \ 'collapsed': '▶',
     \ }
+Plug 'kristijanhusak/vim-dadbod-completion'
 
 Plug 'editorconfig/editorconfig-vim'
 " List ends here. Plugins become visible to Vim after this call.
@@ -360,7 +361,7 @@ autocmd FileType go nmap gn :GoRename<CR>
 autocmd FileType go nmap gr :GoReferrers<CR>
 autocmd FileType go nmap <leader>B :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>R <Plug>(go-run)
-autocmd FileType go set colorcolumn=80
+autocmd FileType go set colorcolumn=100
 
 autocmd FileType typescript      nmap gd :call CocAction('jumpDefinition')<CR>
 autocmd FileType typescript      nmap gD :call CocAction('jumpImplementation')<CR>
@@ -422,6 +423,9 @@ function! SetCommentPrefix()
     elseif &filetype ==? "py"
         let s:comment_prefix = "# "
         let s:comment_prefix_no_space = "#"
+    elseif &filetype ==? "sql"
+        let s:comment_prefix = "-- "
+        let s:comment_prefix_no_space = "--"
     endif
 endfunction
 

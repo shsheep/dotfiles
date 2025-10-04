@@ -10,6 +10,10 @@ export EDITOR=vim
 
 . "$HOME/.cargo/env"
 
+# Move cursor word by word by pressing Alt + Left/Right
+bind '"\e[1;3C": forward-word'
+bind '"\e[1;3D": backward-word'
+
 # Define colors
 C_DEFAULT="\[\033[m\]"
 C_WHITE="\[\033[1m\]"

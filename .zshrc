@@ -111,6 +111,7 @@ sdstrm() {
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# Move cursor word by word by pressing Alt + Left/Right
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
@@ -187,6 +188,7 @@ export PATH=$PATH:/opt/homebrew/opt/libpq/bin
 export PATH=$PATH:/Applications/Cursor.app/Contents/Resources/app/bin
 
 export EDITOR=vim
+export TERM=xterm-256color
 # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
@@ -201,7 +203,9 @@ export PATH=$PATH:$HOME/.local/bin
 
 export UPSTAGE_HOME=$HOME/Upstage
 
+export CONTAINER_PLATFORM=docker
 export CUSTOMER_HOME=$UPSTAGE_HOME/docai-enterprise-customer-support
+export D8S_HOME=$UPSTAGE_HOME/docai-d8s
 export DATA_HOME=$UPSTAGE_HOME/data
 export DIST_HOME=$UPSTAGE_HOME/enterprise-dist
 export DOCAI_HOME=$UPSTAGE_HOME/docai-enterprise
@@ -212,3 +216,35 @@ export SHL_HOME=$UPSTAGE_HOME/shl
 export STANDARD_HOME=$UPSTAGE_HOME/devops-delivery-standard
 export SOLAR_HOME=$UPSTAGE_HOME/solar-system-fe
 export WORKFLOW_HOME=$UPSTAGE_HOME/docai-inference-workflow
+
+declare -A pomo_options
+pomo_options["work"]="50"
+pomo_options["break"]="10"
+pomo_options["hard_work"]="100"
+pomo_options["hard_break"]="30"
+
+do_work () {
+  if [ -n "$1" -a -n "${pomo_options["$1"]}" ]; then
+      val=$1
+      echo $val
+      timer ${pomo_options["$val"]}m
+      terminal-notifier -message 'Pomodoro' \
+        -title 'Work Timer is up! Take a Break 😊' \
+        -appIcon '~/Pictures/tcp_state_transition.gif' \
+        -sound Crystal
+      say "'$val' Timer is up! Take a break"
+  fi
+}
+
+do_break () {
+  if [ -n "$1" -a -n "${pomo_options["$1"]}" ]; then
+      val=$1
+      echo $val
+      timer ${pomo_options["$val"]}m
+      terminal-notifier -message 'Pomodoro' \
+        -title 'Break Timer is up! Get to work 😊' \
+        -appIcon '/Users/shsheep/Pictures/tcp_state_transition.gif' \
+        -sound Crystal
+      say "'$val' Timer is up! Get to work"
+  fi
+}

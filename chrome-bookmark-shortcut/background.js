@@ -13,7 +13,7 @@ bookmarks['E'] = 'https://emart.ssg.com/';
 bookmarks['G'] = 'https://www.github.com';
 // bookmarks['G'] = 'https://go.dev/talks/2013/bestpractices.slide#1'
 bookmarks['H'] = 'https://chat.openai.com/';
-bookmarks['I'] = 'https://chat.instage.ai/ko';
+bookmarks['I'] = 'https://gemini.google.com/app?hl=ko';
 bookmarks['J'] = 'https://github.com/shsheep/Journey_to_summit/tree/master/Leetcode';
 bookmarks['K'] = 'https://map.kakao.com/';
 bookmarks['L'] = 'https://leetcode.com/problemset/all/';

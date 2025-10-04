@@ -13,7 +13,7 @@ bookmarks['F'] = 'https://flex.team';
 bookmarks['G'] = 'https://mail.google.com/mail';
 // bookmarks['G'] = 'https://go.dev/talks/2013/bestpractices.slide#1'
 bookmarks['H'] = 'https://chat.openai.com/';
-bookmarks['I'] = 'https://chat.instage.ai/ko';
+bookmarks['I'] = 'https://gemini.google.com/app?hl=ko';
 bookmarks['J'] = 'https://agi4work.atlassian.net/jira/software/projects/AIDO/boards/59';
 bookmarks['K'] = 'https://map.kakao.com/';
 bookmarks['L'] = 'https://leetcode.com/problemset/all/';
