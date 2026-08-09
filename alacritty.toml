@@ -1,0 +1,120 @@
+[general]
+live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 17
+normal = { family = "JetBrainsMono Nerd Font Mono" }
+bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
+
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+blink_interval = 400
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+background = "#13122a"
+foreground = "#f4f2fa"
+
+# Cursor color (NOTE: cursor "style"는 여기 두는 게 아니라 [cursor].style 입니다)
+[colors.cursor]
+text = "CellBackground"
+cursor = "#4ced4c"
+
+[colors.normal]
+black   = "#000000"
+red     = "#ec4434"
+green   = "#67c837"
+yellow  = "#df5f19"
+blue    = "#5670f5"
+magenta = "#8375b0"
+cyan    = "#609686"
+white   = "#f3d6b0"
+
+[colors.bright]
+black   = "#080808"
+red     = "#f97a70"
+green   = "#8fff5b"
+yellow  = "#fcce2e"
+blue    = "#48b3e5"
+magenta = "#c07c74"
+cyan    = "#bdfaf0"
+white   = "#f4f2fa"
+
+[window]
+opacity = 1.0
+dynamic_title = true
+option_as_alt = "Both"
+decorations = "None"
+padding = { x = 2, y = 0 }
+
+[keyboard]
+bindings = [
+  # cmd + ; => C-q :
+  { key = "Semicolon", mods = "Command",       chars = "\u0011:" },
+  { key = "Semicolon", mods = "Command|Shift", chars = "\u0011:" },
+
+  # cmd+shift+d => C-q "
+  { key = "D", mods = "Command|Shift", chars = "\u0011\"" },
+
+  # cmd+d => C-q %
+  { key = "D", mods = "Command", chars = "\u0011%" },
+
+  # cmd+t => C-q c
+  { key = "T", mods = "Command", chars = "\u0011c" },
+
+  # cmd+w => C-q X
+  { key = "W", mods = "Command", chars = "\u0011X" },
+
+  # cmd+o => C-q o
+  { key = "O", mods = "Command", chars = "\u0011o" },
+
+  # cmd+shift+o => C-q C-o
+  { key = "O", mods = "Command|Shift", chars = "\u0011\u000f" },
+
+  # tmux 1~9 window 이동 (C-q 1..9)
+  { key = "Key1", mods = "Command", chars = "\u00111" },
+  { key = "Key2", mods = "Command", chars = "\u00112" },
+  { key = "Key3", mods = "Command", chars = "\u00113" },
+  { key = "Key4", mods = "Command", chars = "\u00114" },
+  { key = "Key5", mods = "Command", chars = "\u00115" },
+  { key = "Key6", mods = "Command", chars = "\u00116" },
+  { key = "Key7", mods = "Command", chars = "\u00117" },
+  { key = "Key8", mods = "Command", chars = "\u00118" },
+  { key = "Key9", mods = "Command", chars = "\u00119" },
+
+  { key = "Key0",  mods = "Command", chars = ". shsheep/shsheep.bash_profile\r" },
+  { key = "Equals", mods = "Command", chars = "change-font-size.sh -i\r" },
+  { key = "Minus",  mods = "Command", chars = "change-font-size.sh -d\r" },
+  { key = "PageDown", mods = "Command", chars = "monitor-input U34G3G3R3=hdmi1 && hidapitester --vidpid 046D/B034 --usagePage 0xFF43 --open --length 20 --send-output 0x11,0xFF,0x0A,0x1D,0x00,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\r" }, # TODO - why Backquote not work?(https://docs.rs/winit/latest/winit/keyboard/enum.KeyCode.html#variant.Backquote)
+
+  # ctrl + pgup/pgdn => C-q p / C-q n
+  { key = "PageUp",   mods = "Control", chars = "\u0011p" },
+  { key = "PageDown", mods = "Control", chars = "\u0011n" },
+
+  # cmd+e => C-q w (window list)
+  { key = "E", mods = "Command", chars = "\u0011w" },
+
+  { key = "Z", mods = "Command", chars = "\u0011z" },
+  { key = "A", mods = "Command", chars = "\u0011a" },
+  { key = "B", mods = "Command", chars = "\u0011b" },
+
+  # cmd + arrow => C-q H/J/K/L
+  { key = "Left",  mods = "Command", chars = "\u0011H" },
+  { key = "Down",  mods = "Command", chars = "\u0011J" },
+  { key = "Up",    mods = "Command", chars = "\u0011K" },
+  { key = "Right", mods = "Command", chars = "\u0011L" },
+
+  # cmd+shift+,/. => C-q C-h / C-q C-l
+  { key = "Comma",  mods = "Command|Shift", chars = "\u0011\b" },
+  { key = "Period", mods = "Command|Shift", chars = "\u0011\f" },
+
+  # cmd+[ / cmd+] => C-q [ / C-q ]
+  { key = "LBracket", mods = "Command", chars = "\u0011[" },
+  { key = "RBracket", mods = "Command", chars = "\u0011]" },
+]
