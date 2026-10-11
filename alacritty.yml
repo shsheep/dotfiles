@@ -11,7 +11,7 @@ font:
   italic:
     family: "JetBrainsMono Nerd Font Mono"
     style: Italic
-  size: 14
+  size: 13
 
 draw_bold_text_with_bright_colors: true
 
@@ -128,6 +128,9 @@ key_bindings:
   - { key: Key0, mods: Command, chars: ". shsheep/shsheep.bash_profile\x0D" }
   - { key: Equals, mods: Command, chars: "change-font-size.sh -i\x0D" }
   - { key: Minus, mods: Command, chars: "change-font-size.sh -d\x0D" }
+  - { key: "PageDown", mods: Command, chars: "monitor-input U34G3G3R3=dp2 && hidapitester --vidpid 046D/B034 --usagePage 0xFF43 --open --length 20 --send-output 0x11,0xFF,0x0A,0x1D,0x01,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 --timeout 1000 --read-input\x0D" }
+  - { key: A, mods: Command|Control, chars: "shortcuts run \"convert-screen-saver-time\"\x0D" }
+  - { key: V, mods: Command|Control, chars: "shortcuts run \"toggle-gp-vpn\"\x0D" }
   # - { key: Key9, mods: Command, chars: "\x11\x39" }
 
   # tmux 옆 윈도우로 이동

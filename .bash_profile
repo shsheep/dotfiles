@@ -5,8 +5,9 @@ if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
 
-export PATH=$PATH:/home/shsheep/go/bin:/home/shsheep/.local/bin:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin:$HOME/.local/bin:/usr/local/go/bin
 export EDITOR=vim
+export TERM=xterm-256color
 
 . "$HOME/.cargo/env"
 
@@ -59,12 +60,12 @@ export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}$C_LIGHTGREEN\
 
 dstrm() {
     for cont_id in "$@"; do
-        docker stop $cont_id && docker rm $cont_id
+        docker stop -t 2 $cont_id && docker rm $cont_id
     done
 }
 sdstrm() {
     for cont_id in "$@"; do
-        sudo docker stop $cont_id && sudo docker rm $cont_id
+        sudo docker stop -t 2 $cont_id && sudo docker rm $cont_id
     done
 }
 stty -ixon
@@ -73,46 +74,69 @@ stty -ixon
 alias a="./a.out"
 alias amek="make"
 alias amke="make"
-alias cd,,,,="cd ../.. && ls"
+alias c="curl"
+alias cd,,,,="cd .. && cd .. && ls"
 alias cd,,="cd .. && ls"
 alias cd-="cd - && ls"
-alias cd....="cd ../.. && ls"
+alias cd....="cd .. && cd .. && ls"
 alias cd..="cd .. && ls"
 alias cd~="cd ~ && ls"
 alias cl="cat *.log"
 alias clang-format="clang-format -style=file"
 alias devenv="cd ~/Workspace/dotfiles"
+alias de="docker exec -it"
+alias dl="docker logs -f -n 10"
+alias di="docker images"
+# alias docker="podman"
+alias dp="docker ps"
+alias dpa="docker ps -a"
 alias echi="echo"
 alias echp="echo"
 alias g++="g++ -std=c++2a"
 alias gd="git diff"
 alias gdt="git difftool"
-alias gpp="g++"
+alias glow="glow -s ~/pink.json -w 120"
+alias gpp="g++ -std=c++2a"
 alias GRep="grep"
 alias GRpe="grep"
 alias Grep="grep"
 alias Grpe="grep"
 alias grpe="grep"
 alias gs="git status"
-alias g__="g++"
+alias g__="g++ -std=c++2a"
+alias jq="jq --indent 4"
 alias iv="vim"
+alias k="kubectl"
 alias ll="ls -alF"
-alias llrt="ls -alrt"
+alias llrt="ls -alrtF"
+alias llrth="ls -ahlrtF"
 alias LS="ls"
 alias MC="make clean"
 alias mkae="make"
+alias mydu="du -h -d 1"
 alias nv="nvim"
+alias nvi="nvim"
 alias nvrc="vim ~/.vimrc"
+alias nrc="~/.config/nvim/init.vim"
+alias nzr="nvim ~/.zshrc"
+alias psef="ps -ef"
 alias rml="rm -f *.log"
 alias sbp="source ~/.bash_profile"
+alias szr="source ~/.zshrc"
 alias tfl="tail -f *.log"
 alias vbp="vim ~/.bash_profile"
 alias vi="vim"
 alias vo="vim"
+alias vio="vi -o"
+alias viO="vi -O"
+alias vo="vi"
 alias vrc="~/.vimrc"
-alias vu="vim"
+alias vu="vi"
 alias vvi="vim"
-alias vvrc="vim ~/.vimrc"
+alias vvrc="vi ~/.vimrc"
 alias wiki="cd ~/Workspace/shsheepwiki"
 
-export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
+if command -v rg &> /dev/null; then
+    export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-vcs"
+fi
+export CONTAINER_PLATFORM=docker

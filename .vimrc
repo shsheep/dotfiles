@@ -418,6 +418,7 @@ function! SetCommentPrefix()
                \ || &filetype ==? "go"
                \ || &filetype ==? "rust"
                \ || &filetype ==? "javascript"
+               \ || &filetype ==? "cuda"
         let s:comment_prefix = "// "
         let s:comment_prefix_no_space = "//"
     elseif &filetype ==? "py"

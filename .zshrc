@@ -73,6 +73,14 @@ plugins=(git docker pip golang rust fzf poetry)
 source $ZSH/oh-my-zsh.sh
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+export PATH=$PATH:$HOME/go/bin
+export EDITOR=vim
+export TERM=xterm-256color
+
+# Move cursor word by word by pressing Alt + Left/Right
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
+
 parse_git_branch() {
     git status --short 2> /dev/null 1> /dev/null
     if [ $? -ne 0 ]; then
@@ -86,42 +94,27 @@ parse_git_branch() {
 }
 dstrm() {
     for cont_id in "$@"; do
-        docker stop $cont_id && docker rm $cont_id
+        docker stop -t 2 $cont_id && docker rm $cont_id
     done
 }
 sdstrm() {
     for cont_id in "$@"; do
-        sudo docker stop $cont_id && sudo docker rm $cont_id
+        sudo docker stop -t 2 $cont_id && sudo docker rm $cont_id
     done
 }
+
 # User configuration
-
 # export MANPATH="/usr/local/man:$MANPATH"
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# Move cursor word by word by pressing Alt + Left/Right
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
 
 compdef _gnu_generic delta
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# alias g++="g++ -std=c++2a"
-# alias vy="vim -u -/shsheep/shsheep.vimrc"
-alias a="./a.out"
 alias a="./a.out"
 alias amek="make"
 alias amke="make"
@@ -132,6 +125,9 @@ alias cd-="cd - && ls"
 alias cd....="cd .. && cd .. && ls"
 alias cd..="cd .. && ls"
 alias cd~="cd ~ && ls"
+alias cl="cat *.log"
+alias clang-format="clang-format -style=file"
+alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 alias devenv="cd ~/Workspace/dotfiles"
 alias de="docker exec -it"
 alias dl="docker logs -f -n 10"
@@ -139,27 +135,30 @@ alias di="docker images"
 # alias docker="podman"
 alias dp="docker ps"
 alias dpa="docker ps -a"
-alias cl="cat *.log"
-alias clang-format="clang-format -style=file"
 alias echi="echo"
 alias echp="echo"
+alias g++="g++ -std=c++2a"
 alias gd="git diff"
 alias gdt="git difftool"
+alias glow="glow -s ~/pink.json -w 120"
 alias gpp="g++ -std=c++2a"
-alias g++="g++ -std=c++2a"
 alias GRep="grep"
-alias Grep="grep"
 alias GRpe="grep"
+alias Grep="grep"
 alias Grpe="grep"
 alias grpe="grep"
 alias gs="git status"
 alias g__="g++ -std=c++2a"
+alias jq="jq --indent 4"
+alias iv="vim"
 alias k="kubectl"
 alias ll="ls -alF"
 alias llrt="ls -alrtF"
+alias llrth="ls -ahlrtF"
 alias LS="ls"
 alias MC="make clean"
 alias mkae="make"
+alias mydu="du -h -d 1"
 alias nv="nvim"
 alias nvi="nvim"
 alias nvrc="nvim ~/.config/nvim/init.vim"
@@ -167,9 +166,12 @@ alias nrc="~/.config/nvim/init.vim"
 alias nzr="nvim ~/.zshrc"
 alias psef="ps -ef"
 alias rml="rm -f *.log"
+alias sbp="source ~/.bash_profile"
 alias szr="source ~/.zshrc"
 alias tfl="tail -f *.log"
+alias vbp="vim ~/.bash_profile"
 alias vi="/opt/homebrew/Cellar/vim/9.1.0200/bin/vim"
+alias vo="vim"
 alias vim="/opt/homebrew/Cellar/vim/9.1.0200/bin/vim"
 alias vio="/opt/homebrew/Cellar/vim/9.1.0200/bin/vim -o"
 alias viO="/opt/homebrew/Cellar/vim/9.1.0200/bin/vim -O"
@@ -181,70 +183,34 @@ alias vvrc="vi ~/.vimrc"
 alias vzr="vi ~/.zshrc"
 alias wiki="cd ~/Workspace/shsheepwiki"
 
-export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/.rbenv/bin
 export PATH=$PATH:$HOME/Library/Python/3.9/bin
 export PATH=$PATH:/opt/homebrew/opt/libpq/bin
 export PATH=$PATH:/Applications/Cursor.app/Contents/Resources/app/bin
 
-export EDITOR=vim
-export TERM=xterm-256color
 # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$PATH:/opt/homebrew/bin"
-# export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
-export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if command -v rg &> /dev/null; then
+    export FZF_DEFAULT_COMMAND="rg --files --hidden --no-ignore-vcs"
+fi
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-export PATH=$PATH:$HOME/.local/bin
+export CONTAINER_PLATFORM=docker
 
 export UPSTAGE_HOME=$HOME/Upstage
-
-export CONTAINER_PLATFORM=docker
-export CUSTOMER_HOME=$UPSTAGE_HOME/docai-enterprise-customer-support
-export D8S_HOME=$UPSTAGE_HOME/docai-d8s
+export DEVOPS_HOME=$HOME/Upstage/02-Devops
+export DOCUMENT_HOME=$UPSTAGE_HOME/00-Documents
+export DIST_HOME=$UPSTAGE_HOME/01-Distribution
+export CUSTOMER_HOME=$UPSTAGE_HOME/03-Docai/docai-enterprise-customer-support
+export ETC_HOME=$UPSTAGE_HOME/03-Docai/docai-d8s
 export DATA_HOME=$UPSTAGE_HOME/data
-export DIST_HOME=$UPSTAGE_HOME/enterprise-dist
-export DOCAI_HOME=$UPSTAGE_HOME/docai-enterprise
-export DOCUMENT_HOME=$UPSTAGE_HOME/Documents
-export MODEL_HOME=$UPSTAGE_HOME/models
-export ISSUE_HOME=$UPSTAGE_HOME/issue
+export DATALOADER_HOME=$UPSTAGE_HOME/02-Devops/devops-dataloader
+export DOCAI_HOME=$UPSTAGE_HOME/03-Docai/docai-enterprise
+export MODEL_HOME=$UPSTAGE_HOME/01-Distribution/common/models
 export SHL_HOME=$UPSTAGE_HOME/shl
-export STANDARD_HOME=$UPSTAGE_HOME/devops-delivery-standard
-export SOLAR_HOME=$UPSTAGE_HOME/solar-system-fe
-export WORKFLOW_HOME=$UPSTAGE_HOME/docai-inference-workflow
-
-declare -A pomo_options
-pomo_options["work"]="50"
-pomo_options["break"]="10"
-pomo_options["hard_work"]="100"
-pomo_options["hard_break"]="30"
-
-do_work () {
-  if [ -n "$1" -a -n "${pomo_options["$1"]}" ]; then
-      val=$1
-      echo $val
-      timer ${pomo_options["$val"]}m
-      terminal-notifier -message 'Pomodoro' \
-        -title 'Work Timer is up! Take a Break 😊' \
-        -appIcon '~/Pictures/tcp_state_transition.gif' \
-        -sound Crystal
-      say "'$val' Timer is up! Take a break"
-  fi
-}
-
-do_break () {
-  if [ -n "$1" -a -n "${pomo_options["$1"]}" ]; then
-      val=$1
-      echo $val
-      timer ${pomo_options["$val"]}m
-      terminal-notifier -message 'Pomodoro' \
-        -title 'Break Timer is up! Get to work 😊' \
-        -appIcon '/Users/shsheep/Pictures/tcp_state_transition.gif' \
-        -sound Crystal
-      say "'$val' Timer is up! Get to work"
-  fi
-}
+export STANDARD_HOME=$UPSTAGE_HOME/02-Devops/devops-delivery-standard
+export CTX_HOME=$UPSTAGE_HOME/02-Devops/devops-context
+export NAME=seungho.yang
+export REDIS_PASSWORD=qhdkscjfwj1!
